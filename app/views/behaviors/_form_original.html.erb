@@ -1,0 +1,45 @@
+<%= form_with model: @behavior, local: true do |form| %>
+ 
+  <% if @behavior.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@behavior.errors.count, "error") %> prohibited
+        this behavior event from being saved:
+      </h2>
+      <ul>
+        <% @behavior.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+ <p>
+    <%= form.label :"Select Student:" %><br>
+    <%=  form.collection_select :student_id, Student.order(:lName), :id, :full_name_last,   include_blank: true%>
+ </p>
+ <p>
+    Test Check Box
+    <%= form.check_box :loss_privilege%> Loss of privilege
+ </p>
+ <p>
+  
+   <%= form.label :"Test Radio Buttons:" %><br>
+   <% form.radio_button :admin_action, "administration action" %>1
+   <% form.radio_button :time_in_office, "time in office" %>2
+ </p>
+  <p>
+    <%= form.label :"First Name" %><br>
+    <%= form.text_field :fName %>
+  </p>
+ 
+  <p>
+    <%= form.label :"Last Name" %><br>
+    <%= form.text_field :lName %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>

@@ -1,0 +1,35 @@
+<%= render "layouts/header" %>
+<h1>Listing Parents</h1>
+<br/>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><%= link_to 'Home', controller: 'welcome' %></li>
+    </ul>
+  </div>
+</nav>
+
+<table class="table table-stripped">
+  <tr>
+    <th class="col-lg-1 col-sm-1"></th>
+    <th class="col-lg-3 col-sm-3">First Name</th>
+    <th class="col-lg-3 col-sm-3">Last Name</th>
+    <th class="col-lg-1 col-sm-1">Show</th>
+    <th class="col-lg-1 col-sm-1">Edit</th>
+    <th class="col-lg-1 col-sm-1">Destroy</th>
+    <th class="col-lg-2 col-sm-2"></th>
+  </tr>
+  <% @parents.each do |parent| %>
+  <tr>
+    <td></td>
+    <td><%= parent.fName %></td>
+    <td><%= parent.lName %></td>
+    <td><%= link_to 'Show', parent_path(parent) %></td>
+    <td><%= link_to 'Edit', edit_parent_path(parent) %></td>
+    <td><%= link_to 'Destroy', parent_path(parent),
+                method: :delete,
+                data: {confirm: 'Are you sure?'} %></td>
+    <td></td>
+  </tr>
+  <% end %>
+</table>

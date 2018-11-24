@@ -1,0 +1,71 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id: 1
+  event_date: 2018-11-16
+  event_time: 2018-11-16 11:26:43
+  grade: 
+  staff_id: 1
+  location: MyString
+  minor_behavior: MyString
+  major_behavior: MyString
+  motivation: MyString
+  admin_action: MyString
+  time_in_office: false
+  loss_privilege: false
+  conference_with_student: false
+  parent_contact: false
+  time_out_detention: false
+  restitution_community_service: false
+  individualized_instruction: false
+  counselor: false
+  in_school_suspension: false
+  out_school_suspension: false
+  expulsion: false
+  involved_none: false
+  involved_peers: false
+  involved_staff: false
+  involved_teacher: false
+  involved_substitute: false
+  peers_involved: MyString
+  staff_involved: MyString
+  teachers_involved: MyString
+  subsitutes_involved: MyString
+  antecedent: MyString
+  behavior_description: MyString
+  due_process: MyString
+
+two:
+  student_id: 1
+  event_date: 2018-11-16
+  event_time: 2018-11-16 11:26:43
+  grade: 
+  staff_id: 1
+  location: MyString
+  minor_behavior: MyString
+  major_behavior: MyString
+  motivation: MyString
+  admin_action: MyString
+  time_in_office: false
+  loss_privilege: false
+  conference_with_student: false
+  parent_contact: false
+  time_out_detention: false
+  restitution_community_service: false
+  individualized_instruction: false
+  counselor: false
+  in_school_suspension: false
+  out_school_suspension: false
+  expulsion: false
+  involved_none: false
+  involved_peers: false
+  involved_staff: false
+  involved_teacher: false
+  involved_substitute: false
+  peers_involved: MyString
+  staff_involved: MyString
+  teachers_involved: MyString
+  subsitutes_involved: MyString
+  antecedent: MyString
+  behavior_description: MyString
+  due_process: MyString

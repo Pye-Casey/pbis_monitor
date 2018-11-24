@@ -1,0 +1,11 @@
+<p>
+  <strong>First Name:</strong>
+  <%= @parent.fName %>
+</p>
+ 
+<p>
+  <strong>Last Name:</strong>
+  <%= @parent.lName %>
+</p>
+<%= link_to 'Edit', edit_parent_path(@parent) %> <br>
+<%= link_to 'Back', parents_path %>

@@ -1,0 +1,11 @@
+<p>
+  <strong>First Name:</strong>
+  <%= @staff.fName %>
+</p>
+ 
+<p>
+  <strong>Last Name:</strong>
+  <%= @staff.lName %>
+</p>
+<%= link_to 'Edit', edit_staff_path(@staff) %> <br>
+<%= link_to 'Back', staffs_path %>

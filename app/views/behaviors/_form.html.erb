@@ -1,0 +1,201 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<%= form_with model: @behavior, local: true do |form| %>
+  <% my_time = Time.now  %>
+  <% if @behavior.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@behavior.errors.count, "error") %> prohibited
+        this behavior event from being saved:
+      </h2>
+      <ul>
+        <% @behavior.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+  <h2>Behavior Referral</h2>
+  <p>Record the behavior incident below.</p>
+  <div class="row">
+    <div class="well well-sm col-sm-6">
+      <h3>Student Info</h3>
+      <p>
+        <%= form.label :"Select Student: " %>
+        <%=  form.collection_select :student_id, Student.order(:lName), :id, :full_name_last, include_blank: true%>
+       </p>
+      <p>
+        <%= form.label :"Date: " %>
+        <%= select_date Date.today, prefix: :start_date %>
+      </p>
+      <p>
+        <%= form.label :"Time: " %>
+        <%= select_time(my_time, time_separator: ':', ampm: true) %>
+      </p>
+      <p>
+        <%= form.label :"Others involved:" %>
+        <%= form.text_field :fName %>
+      </p>
+      <p>
+        <%= form.label :"Reffering staff: " %>
+        <%=  form.collection_select :staff_id, Staff.order(:lName), :id, :full_name_last, include_blank: true%>
+       </p>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="well well-sm col-sm-5">
+      <h3>Possible Motivation</h3>
+      <p>
+        <%= check_box_tag(:get_peer_attention) %>
+        <%= label_tag(:get_peer_attention, "Obtain peer attention") %> <br>
+        <%= check_box_tag(:get_adult_attention) %>
+        <%= label_tag(:get_adult_attention, "Obtain adult attention") %> <br>
+        <%= check_box_tag(:get_items_activities) %>
+        <%= label_tag(:get_items_activities, "Obtain items/activities") %> <br>
+        <%= check_box_tag(:avoid_task) %>
+        <%= label_tag(:avoid_task, "Avoid task or activity") %> <br>
+        <%= check_box_tag(:avoid_peer) %>
+        <%= label_tag(:avoid_peer, "Avoid peer") %> <br>
+        <%= check_box_tag(:avoid_adult) %>
+        <%= label_tag(:avoid_adult, "Avoid adult") %> <br>
+        <%= form.label :"Other:" %>
+        <%= form.text_field :other_motivation %>
+      </p>
+    </div>
+  </div>
+  <div class="row"></div>
+  <div class="row">
+    <div class="well well-sm col-sm-6">
+      <h3>Minor Problem Behavior</h3>
+      <p>
+        <%= check_box_tag(:minor_language) %>
+        <%= label_tag(:minor_language, "Inappropriate language") %> <br>
+        <%= check_box_tag(:minor_contact) %>
+        <%= label_tag(:minor_contact, "Physical contact/aggression") %> <br>
+        <%= check_box_tag(:minor_defiance) %>
+        <%= label_tag(:minor_defiance, "Defiance/non-compliance") %> <br>
+        <%= check_box_tag(:minor_disruption) %>
+        <%= label_tag(:minor_disruption, "Disruption") %> <br>
+        <%= check_box_tag(:minor_property) %>
+        <%= label_tag(:minor_property, "Property misuse") %> <br>
+        <%= check_box_tag(:minor_dress) %>
+        <%= label_tag(:minor_dress, "Dress code violation") %> <br>
+        <%= check_box_tag(:minor_technology) %>
+        <%= label_tag(:minor_technology, "Technology violation") %> <br>
+        <%= check_box_tag(:minor_tardy) %>
+        <%= label_tag(:minor_tardy, "Tardy") %> <br>
+
+        <%= form.label :"Other:" %>
+        <%= form.text_field :minor_other %>
+      </p>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="well well-sm col-sm-5">
+      <h3>Major Problem Behavior</h3>
+      <p>
+        <%= check_box_tag(:major_language) %>
+        <%= label_tag(:major_language, "Abusive/Inappropriate language") %> <br>
+        <%= check_box_tag(:major_aggression) %>
+        <%= label_tag(:major_aggression, "Fighting/aggression") %> <br>
+        <%= check_box_tag(:major_disrespect) %>
+        <%= label_tag(:major_disrespect, "Disrespect/non-compliance") %> <br>
+        <%= check_box_tag(:major_habitual_disruption) %>
+        <%= label_tag(:major_habitual_disruption, "Habitual disruption") %> <br>
+        <%= check_box_tag(:major_dishonesty) %>
+        <%= label_tag(:major_dishonesty, "Lying/cheating") %> <br>
+        <%= check_box_tag(:major_harrassment) %>
+        <%= label_tag(:major_harrassment, "Harrassment/bullying") %> <br>
+        <%= check_box_tag(:major_tardies) %>
+        <%= label_tag(:major_tardies, "Repeated tardies") %> <br>
+        <%= check_box_tag(:major_vandalism) %>
+        <%= label_tag(:major_vandalism, "Vandalism") %> <br>
+        <%= check_box_tag(:major_theft) %>
+        <%= label_tag(:major_theft, "Theft") %> <br>
+        <%= check_box_tag(:major_dress_code) %>
+        <%= label_tag(:major_dress_code, "Chronic dress code violation") %> <br>
+        <%= check_box_tag(:major_drugs) %>
+        <%= label_tag(:major_drugs, "Drugs") %> <br>
+        <%= check_box_tag(:major_weapons) %>
+        <%= label_tag(:major_weapons, "Weapons") %> <br>
+        <%= form.label :"Other:" %>
+        <%= form.text_field :major_other %>
+      </p>
+    </div>
+
+    </div>
+    
+    <div class="row">
+    <div class="well well-sm col-sm-12">
+      <h3>Comments</h3>
+      <div class="col-sm-4">
+        <p>
+        <%= form.label :"Antecedent: What happened before?" %> <br>
+        <%= form.text_area :antecedent%>
+      </p>
+      </div>
+      <div class="col-sm-4">
+        <p>
+        <%= form.label :"Behavior: What did the student do?" %> <br>
+        <%= form.text_area :behavior_description%>
+      </p>
+      </div>
+      <div class="col-sm-4">
+        <p>
+        <%= form.label :"Due process: Get others perspectives if needed." %> <br>
+        <%= form.text_area :due_process%>
+      </p>
+      </div>
+      
+      
+      
+      
+    </div>
+  </div>
+
+  <div class="row well well-sm">
+    <h3>Administrative Action</h3>
+    <div class="col-sm-4">
+      <%= check_box_tag(:admin_time_office) %>
+      <%= label_tag(:admin_time_office, "Time in office") %> <br>
+      <%= check_box_tag(:admin_loss_privilege) %>
+      <%= label_tag(:admin_loss_privilege, "Loss of privileges") %> <br>
+      <%= check_box_tag(:admin_conference_student) %>
+      <%= label_tag(:admin_conference_student, "Conference with student") %> <br>
+      <%= check_box_tag(:admin_parent_contact) %>
+      <%= label_tag(:admin_parent_contact, "Parent contact") %>
+    </div>
+    <div class="col-sm-4">
+      <%= check_box_tag(:admin_detention) %>
+      <%= label_tag(:admin_detention, "Time out/detention") %> <br>
+      <%= check_box_tag(:admin_service) %>
+      <%= label_tag(:admin_service, "Restitution/community service") %> <br>
+      <%= check_box_tag(:admin_individual_instruction) %>
+      <%= label_tag(:admin_individual_instruction, "Individualized instruction") %> <br>
+      <%= check_box_tag(:admin_counselor) %>
+      <%= label_tag(:admin_counselor, "Counselor") %>
+    </div>
+    <div class="col-sm-4">
+      <%= check_box_tag(:admin_in_school_suspension) %>
+      <%= label_tag(:admin_in_school_suspension, "In-school suspension") %> <br>
+      <%= check_box_tag(:admin_suspension) %>
+      <%= label_tag(:admin_suspension, "Out of school suspension") %> <br>
+      <%= check_box_tag(:admin_expulsion) %>
+      <%= label_tag(:admin_expulsion, "Expulsion") %> <br>
+      <%= form.label :"Other:" %>
+      <%= form.text_field :admin_other %>
+
+    </div>
+  </div>
+  </div>
+    
+  </div>
+
+  
+ 
+ 
+<% end %>

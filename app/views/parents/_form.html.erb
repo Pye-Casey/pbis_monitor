@@ -1,0 +1,31 @@
+<%= form_with model: @parent, local: true do |form| %>
+ 
+  <% if @parent.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@parent.errors.count, "error") %> prohibited
+        this Parent from being saved:
+      </h2>
+      <ul>
+        <% @parent.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :"First Name" %><br>
+    <%= form.text_field :fName %>
+  </p>
+ 
+  <p>
+    <%= form.label :"Last Name" %><br>
+    <%= form.text_field :lName %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
