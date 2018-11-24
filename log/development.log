@@ -4325,3 +4325,889 @@ Processing by AdminController#index as HTML
 Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:15:27 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (70.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 227ms (Views: 117.7ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:20:37 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:49
+  Rendered behaviors/_form.html.erb (61.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 130ms (Views: 126.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:22:57 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (37.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 101ms (Views: 95.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:26:04 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:49
+  Rendered behaviors/_form.html.erb (32.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 103ms (Views: 99.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:28:43 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:49
+  Rendered behaviors/_form.html.erb (60.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 149ms (Views: 145.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:29:35 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:48
+  Rendered behaviors/_form.html.erb (30.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 98ms (Views: 94.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-24 10:30:47 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  Rendered behaviors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 10:30:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 83ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staffs/new" for 127.0.0.1 at 2018-11-24 10:30:56 -0700
+Processing by StaffsController#new as HTML
+  Rendering staffs/new.html.erb within layouts/application
+  Rendered staffs/_form.html.erb (4.2ms)
+  Rendered staffs/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 125ms (Views: 78.2ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/staffs" for 127.0.0.1 at 2018-11-24 10:31:03 -0700
+Processing by StaffsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VrCdbsAlG5HSGRCSUoLA4ow078EjOdU7ym2AS/Uk2wzvqNa/DsA4w/Z53M2YjIulYG8651hLXzlPolQHs8uRsA==", "staff"=>{"fName"=>"Casey", "lName"=>"Pye"}, "commit"=>"Create Staff"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staffs_controller.rb:22
+  [1m[36mStaff Create (2.0ms)[0m  [1m[32mINSERT INTO "staffs" ("fName", "lName", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fName", "Casey"], ["lName", "Pye"], ["created_at", "2018-11-24 17:31:03.085214"], ["updated_at", "2018-11-24 17:31:03.085214"]]
+  ↳ app/controllers/staffs_controller.rb:22
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staffs_controller.rb:22
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 11ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2018-11-24 10:31:03 -0700
+Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/staffs_controller.rb:8
+  Rendering staffs/show.html.erb within layouts/application
+  Rendered staffs/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 87ms (Views: 79.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/staffs" for 127.0.0.1 at 2018-11-24 10:31:05 -0700
+Processing by StaffsController#index as HTML
+  Rendering staffs/index.html.erb within layouts/application
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/staffs/index.html.erb:11
+  Rendered staffs/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 10:31:07 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-11-24 10:31:10 -0700
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (0.5ms)
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:24
+  Rendered students/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 76ms (Views: 69.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 10:31:12 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 78ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:31:20 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:48
+  Rendered behaviors/_form.html.erb (33.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:42:52 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:49
+  Rendered behaviors/_form.html.erb (35.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 113ms (Views: 108.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:44:31 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (3.0ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (113.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (115.9ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 24.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `grade_level' for #<Student:0x00007fe20d1f8208>
+Did you mean?  grade_change):
+    28:       <h3>Student Info</h3>
+    29:       <p>
+    30:         <%= form.label :"Select Student: " %>
+    31:         <%=  form.collection_select :student_id, Student.order(:lName), :id, :full_name_last_grade, include_blank: true%>
+    32:        </p>
+    33:        
+    34:       <p>
+  
+app/models/student.rb:10:in `full_name_last_grade'
+app/views/behaviors/_form.html.erb:31:in `block in _app_views_behaviors__form_html_erb__4328091028814853036_70304388231020'
+app/views/behaviors/_form.html.erb:7:in `_app_views_behaviors__form_html_erb__4328091028814853036_70304388231020'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb__3079642102417947494_70304388265320'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:44:58 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (1.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:49
+  Rendered behaviors/_form.html.erb (98.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (100.7ms)
+Completed 200 OK in 258ms (Views: 146.0ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 10:45:23 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (2.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:49
+  Rendered behaviors/_form.html.erb (34.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 102ms (Views: 95.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:00:30 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (1.0ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:49
+  Rendered behaviors/_form.html.erb (31.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 93ms (Views: 87.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:07:28 -0700
+  
+SyntaxError (/home/casey/monitor3/app/controllers/behaviors_controller.rb:50: syntax error, unexpected ',', expecting ')'
+			,:get_peer_attention, :get_adu...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting keyword_end
+			,:avoid_adult,:other_motivatio...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+			,:minor_disruption,:minor_prop...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+			,:minor_other,:major_language,...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+			,:major_harrassment,:major_tar...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+			,:major_drugs,:major_weapons,:...
+			^):
+  
+app/controllers/behaviors_controller.rb:50: syntax error, unexpected ',', expecting ')'
+app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:08:31 -0700
+  
+SyntaxError (/home/casey/monitor3/app/controllers/behaviors_controller.rb:50: syntax error, unexpected ',', expecting ')'
+			, :get_peer_attention, :get_ad...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting keyword_end
+			,:avoid_adult,:other_motivatio...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+			,:minor_disruption,:minor_prop...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+			,:minor_other,:major_language,...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+			,:major_harrassment,:major_tar...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+			,:major_drugs,:major_weapons,:...
+			^):
+  
+app/controllers/behaviors_controller.rb:50: syntax error, unexpected ',', expecting ')'
+app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:09:23 -0700
+  
+SyntaxError (/home/casey/monitor3/app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting ')'
+			, :get_peer_attention, :get_ad...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+			,:avoid_adult,:other_motivatio...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+			,:minor_disruption,:minor_prop...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+			,:minor_other,:major_language,...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+			,:major_harrassment,:major_tar...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:56: syntax error, unexpected ',', expecting keyword_end
+			,:major_drugs,:major_weapons,:...
+			^):
+  
+app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting ')'
+app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:56: syntax error, unexpected ',', expecting keyword_end
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:10:03 -0700
+  
+SyntaxError (/home/casey/monitor3/app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting ')'
+			, :get_peer_attention, :get_ad...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+			, :avoid_adult,:other_motivati...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+			, :minor_disruption,:minor_pro...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+			, :minor_other,:major_language...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+			, :major_harrassment,:major_ta...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:56: syntax error, unexpected ',', expecting keyword_end
+			, :major_drugs,:major_weapons,...
+			^):
+  
+app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting ')'
+app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:56: syntax error, unexpected ',', expecting keyword_end
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:10:21 -0700
+  
+SyntaxError (/home/casey/monitor3/app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting ')'
+			, :avoid_adult,:other_motivati...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+			, :minor_disruption,:minor_pro...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+			, :minor_other,:major_language...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+			, :major_harrassment,:major_ta...
+			^
+/home/casey/monitor3/app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+			, :major_drugs,:major_weapons,...
+			^):
+  
+app/controllers/behaviors_controller.rb:51: syntax error, unexpected ',', expecting ')'
+app/controllers/behaviors_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:53: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:54: syntax error, unexpected ',', expecting keyword_end
+app/controllers/behaviors_controller.rb:55: syntax error, unexpected ',', expecting keyword_end
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:11:58 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (105.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 277ms (Views: 149.7ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:14:19 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (1.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (35.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 107ms (Views: 101.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:14:32 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (32.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 102ms (Views: 98.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:14:41 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (36.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 98ms (Views: 93.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 11:14:45 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 11:14:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 95ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:14:53 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (34.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:15:29 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (31.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 102ms (Views: 98.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 11:16:20 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lYf7BIlcbZ4BbHwFPzH54UOhWnv5k2b/GqqjqXNMwmjKLPxskj7VPq9as9bTl0dmHyBiKDg5dr7JnFMdAIHlrw==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"18", "event_time(5i)"=>"15", "location"=>"hallway", "peers_involved"=>"Billy Joel", "staff_id"=>"1", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"asdf", "behavior_description"=>"asdfasf", "due_process"=>"asdasd", "admin_other"=>""}, "get_peer_attention"=>"1", "minor_language"=>"1", "admin_time_office"=>"1", "commit"=>"Create Behavior"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1)):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 11:17:34 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lYf7BIlcbZ4BbHwFPzH54UOhWnv5k2b/GqqjqXNMwmjKLPxskj7VPq9as9bTl0dmHyBiKDg5dr7JnFMdAIHlrw==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"18", "event_time(5i)"=>"15", "location"=>"hallway", "peers_involved"=>"Billy Joel", "staff_id"=>"1", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"asdf", "behavior_description"=>"asdfasf", "due_process"=>"asdasd", "admin_other"=>""}, "get_peer_attention"=>"1", "minor_language"=>"1", "admin_time_office"=>"1", "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 11:17:59 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lYf7BIlcbZ4BbHwFPzH54UOhWnv5k2b/GqqjqXNMwmjKLPxskj7VPq9as9bTl0dmHyBiKDg5dr7JnFMdAIHlrw==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"18", "event_time(5i)"=>"15", "location"=>"hallway", "peers_involved"=>"Billy Joel", "staff_id"=>"1", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"asdf", "behavior_description"=>"asdfasf", "due_process"=>"asdasd", "admin_other"=>""}, "get_peer_attention"=>"1", "minor_language"=>"1", "admin_time_office"=>"1", "commit"=>"Create Behavior"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 11:18:29 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (1.3ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (99.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (101.5ms)
+Completed 200 OK in 267ms (Views: 143.0ms | ActiveRecord: 35.1ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 11:18:36 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9tygcWi4TKpMzpBxowViR8ObiYusqbhCopGVCXAczcocHXp3sBZkgcF9ZIqKqsOQ49Wde8YtqDZvLbgVg1U8A==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"18", "event_time(5i)"=>"15", "location"=>"hallway", "peers_involved"=>"Billy Joel", "staff_id"=>"1", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"asdf", "behavior_description"=>"asdfasf", "due_process"=>"asdasd", "admin_other"=>""}, "get_peer_attention"=>"1", "minor_language"=>"1", "admin_time_office"=>"1", "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:21:40 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (70.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 206ms (Views: 200.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-24 13:21:45 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  Rendered behaviors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 101ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 13:21:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staffs/new" for 127.0.0.1 at 2018-11-24 13:22:11 -0700
+Processing by StaffsController#new as HTML
+  Rendering staffs/new.html.erb within layouts/application
+  Rendered staffs/_form.html.erb (4.8ms)
+  Rendered staffs/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2018-11-24 13:22:15 -0700
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (5.8ms)
+  Rendered students/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parents/new" for 127.0.0.1 at 2018-11-24 13:22:30 -0700
+Processing by ParentsController#new as HTML
+  Rendering parents/new.html.erb within layouts/application
+  Rendered parents/_form.html.erb (5.1ms)
+  Rendered parents/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 119ms (Views: 74.5ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:22:47 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (2.7ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (43.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 120ms (Views: 112.5ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 13:22:56 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y69xB00D88hpUnqM9K4i/qZsIp2ymSdFvWXrqOhFN2D3xxGceCB6SzOtNSxIPQsnU1zG5Jdxozw7mXF4MEN2cA==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"22", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:44:44 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:35
+  [1m[36mStaff Load (1.0ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:56
+  Rendered behaviors/_form.html.erb (58.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 122ms (Views: 116.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:45:50 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (9.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/casey/monitor3/app/views/behaviors/_form.html.erb:35: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
+... { |s| s.full_name_last, s.id }, include_blank: true );@outp...
+...                              ^
+/home/casey/monitor3/app/views/behaviors/_form.html.erb:213: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/home/casey/monitor3/app/views/behaviors/_form.html.erb:215: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/casey/monitor3/app/views/behaviors/_form.html.erb:217: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/behaviors/_form.html.erb:35: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
+app/views/behaviors/_form.html.erb:213: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/_form.html.erb:215: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/behaviors/_form.html.erb:217: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb__3079642102417947494_70304386919560'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:46:10 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:35
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:56
+  Rendered behaviors/_form.html.erb (32.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 100ms (Views: 93.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 13:47:14 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9JGH/fAICJ/hBuX53A0t8VY8FdAzXYe4fNWU9VTyJlgeUF37KKYgtGy1EQL1oowmdnIBIFnZl8yxabnpp7vXg==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"44", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:48:11 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (2.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:35
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:56
+  Rendered behaviors/_form.html.erb (36.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 106ms (Views: 99.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:48:14 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:35
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:56
+  Rendered behaviors/_form.html.erb (45.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 110ms (Views: 104.1ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 13:48:20 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5BrmHd+A4YHuEBfdzNhzeXA4EgwjAZu3ffjNwxLVXV+7seF1xOJZIUAm2A4gfs3+LLkqX+Kri/auzj13YRh6mA==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"44", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:52:43 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:32
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (36.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 105ms (Views: 101.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 13:52:49 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ppTKizqVQtloTDSEhlWIelGvh6spFv8kBNxQemfrYCD5P83jIff6ecZ6+1dq8zb9DS6/+Oi872XX6qDOFCZH5w==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"52", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 13:55:17 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:32
+  [1m[36mStaff Load (1.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (32.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 94ms (Views: 88.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 13:55:29 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0aijJwC4ECZZrTu+N7JUWTLnwO+yFJT50/LxkKILv7o7aXkh2BY4DdQez0UeHfWOEqnUH9iQhI0eTtyMUUJOQ==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"52", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 13:56:09 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0aijJwC4ECZZrTu+N7JUWTLnwO+yFJT50/LxkKILv7o7aXkh2BY4DdQez0UeHfWOEqnUH9iQhI0eTtyMUUJOQ==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"52", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: behavior_student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 13:56:24 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0aijJwC4ECZZrTu+N7JUWTLnwO+yFJT50/LxkKILv7o7aXkh2BY4DdQez0UeHfWOEqnUH9iQhI0eTtyMUUJOQ==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"52", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: student_id):
+  
+app/controllers/behaviors_controller.rb:49:in `behavior_params'
+app/controllers/behaviors_controller.rb:19:in `create'
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 14:00:45 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0aijJwC4ECZZrTu+N7JUWTLnwO+yFJT50/LxkKILv7o7aXkh2BY4DdQez0UeHfWOEqnUH9iQhI0eTtyMUUJOQ==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"52", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Unpermitted parameters: :location, :admin_other
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 16.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'other_motivation' for Behavior.):
+  
+app/controllers/behaviors_controller.rb:19:in `create'
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 14:02:32 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0aijJwC4ECZZrTu+N7JUWTLnwO+yFJT50/LxkKILv7o7aXkh2BY4DdQez0UeHfWOEqnUH9iQhI0eTtyMUUJOQ==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"52", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Unpermitted parameters: :location, :other_motivation, :admin_other
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 9.7ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'minor_other' for Behavior.):
+  
+app/controllers/behaviors_controller.rb:19:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2876881093974743205)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2876881093974743205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddMinorOtherToBehaviors (20181124211706)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "minor_other" character varying[0m
+  ↳ db/migrate/20181124211706_add_minor_other_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181124211706"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddMajorOtherToBehaviors (20181124211825)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "major_other" character varying[0m
+  ↳ db/migrate/20181124211825_add_major_other_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181124211825"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 14:18:51 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t0aijJwC4ECZZrTu+N7JUWTLnwO+yFJT50/LxkKILv7o7aXkh2BY4DdQez0UeHfWOEqnUH9iQhI0eTtyMUUJOQ==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"24", "event_time(4i)"=>"20", "event_time(5i)"=>"52", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "other_motivation"=>"", "minor_other"=>"", "major_other"=>"", "antecedent"=>"", "behavior_description"=>"", "due_process"=>"", "admin_other"=>""}, "commit"=>"Create Behavior"}
+Unpermitted parameters: :location, :other_motivation, :admin_other
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/behaviors_controller.rb:21
+  [1m[36mBehavior Create (1.9ms)[0m  [1m[32mINSERT INTO "behaviors" ("student_id", "event_date", "event_time", "peers_involved", "antecedent", "behavior_description", "due_process", "created_at", "updated_at", "minor_other", "major_other") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["student_id", 1], ["event_date", "2018-11-24"], ["event_time", "20:52:00"], ["peers_involved", ""], ["antecedent", ""], ["behavior_description", ""], ["due_process", ""], ["created_at", "2018-11-24 21:18:51.384388"], ["updated_at", "2018-11-24 21:18:51.384388"], ["minor_other", ""], ["major_other", ""]]
+  ↳ app/controllers/behaviors_controller.rb:21
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/behaviors_controller.rb:21
+Redirected to http://localhost:3000/behaviors/1
+Completed 302 Found in 115ms (ActiveRecord: 18.3ms)
+
+
+Started GET "/behaviors/1" for 127.0.0.1 at 2018-11-24 14:18:51 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  Rendered behaviors/show.html.erb within layouts/application (41.7ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `fName' for #<Behavior:0x00007fe20d1b63a8>):
+    1: <p>
+    2:   <strong>First Name:</strong>
+    3:   <%= @behavior.fName %>
+    4: </p>
+    5:  
+    6: <p>
+  
+app/views/behaviors/show.html.erb:3:in `_app_views_behaviors_show_html_erb__3216222462255724564_70304429614700'

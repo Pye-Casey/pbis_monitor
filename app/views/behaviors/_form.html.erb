@@ -26,21 +26,27 @@
   <div class="row">
     <div class="well well-sm col-sm-6">
       <h3>Student Info</h3>
-      <p>
-        <%= form.label :"Select Student: " %>
-        <%=  form.collection_select :student_id, Student.order(:lName), :id, :full_name_last, include_blank: true%>
+     
+       <p>
+        Testing new select:<%= form.label :"Select Student: " %>
+        <%= form.select :student_id, Student.all.collect { |s| [s.full_name_last, s.id] }, include_blank: true %>
        </p>
       <p>
         <%= form.label :"Date: " %>
-        <%= select_date Date.today, prefix: :start_date %>
+        <%= date_select("behavior", "event_date", selected: Date.today)%>
       </p>
       <p>
         <%= form.label :"Time: " %>
-        <%= select_time(my_time, time_separator: ':', ampm: true) %>
+        <%= time_select 'behavior', 'event_time', {ampm: true}%>
+
       </p>
       <p>
-        <%= form.label :"Others involved:" %>
-        <%= form.text_field :fName %>
+        <%= form.label :"Location:" %>
+        <%= form.text_field :location %>
+      </p>
+      <p>
+        <%= form.label :"Peers involved:" %>
+        <%= form.text_field :peers_involved %>
       </p>
       <p>
         <%= form.label :"Reffering staff: " %>
@@ -64,7 +70,7 @@
         <%= check_box_tag(:avoid_adult) %>
         <%= label_tag(:avoid_adult, "Avoid adult") %> <br>
         <%= form.label :"Other:" %>
-        <%= form.text_field :other_motivation %>
+        <%= form.text_field :motivation %>
       </p>
     </div>
   </div>
@@ -190,6 +196,9 @@
       <%= form.text_field :admin_other %>
 
     </div>
+    <p>
+      <%= form.submit({:class => 'btn button-primary'}) %>
+    </p>
   </div>
   </div>
     

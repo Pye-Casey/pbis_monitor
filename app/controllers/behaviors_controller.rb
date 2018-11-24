@@ -46,6 +46,7 @@ class BehaviorsController < ApplicationController
 	
 	private
 	def behavior_params 
-		#params.require(:behavior).permit(:fName, :lName)
+		params.require(:behavior)
+			.permit(:student_id, :event_date, :event_time, :locaton, :peers_involved, :staff_id, :get_peer_attention, :get_adult_attention, :get_items_activities, :avoid_task, :avoid_peer, :avoid_adult,:motivation,:minor_language,:minor_contact,:minor_defiance, :minor_disruption,:minor_property,:minor_dress,:minor_technology,:minor_tardy, :minor_other,:major_language,:major_aggression,:major_disrespect,:major_habitual_disruption,:major_dishonesty, :major_harrassment,:major_tardies,:major_vandalism,:major_theft,:major_dress_code, :major_drugs,:major_weapons,:major_other,:antecedent,:behavior_description,:due_process)
 	end
 end

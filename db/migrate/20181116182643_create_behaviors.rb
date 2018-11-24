@@ -34,6 +34,8 @@ class CreateBehaviors < ActiveRecord::Migration[5.2]
       t.string :antecedent
       t.string :behavior_description
       t.string :due_process
+      t.string :minor_other
+      t.string :major_other
 
       t.timestamps
     end
