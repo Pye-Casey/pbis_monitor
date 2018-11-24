@@ -28,7 +28,7 @@
       <h3>Student Info</h3>
      
        <p>
-        Testing new select:<%= form.label :"Select Student: " %>
+        <%= form.label :"Select Student: " %>
         <%= form.select :student_id, Student.all.collect { |s| [s.full_name_last, s.id] }, include_blank: true %>
        </p>
       <p>

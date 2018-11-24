@@ -1,11 +1,69 @@
-<p>
-  <strong>First Name:</strong>
-  <%= @behavior.fName %>
-</p>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<div class="container">
+  <h2>Behavior Referral View</h2>
+  <p>Here are the details to the incident:</p>
+  <div class="row">
+  	<div class="well well-sm col-sm-6">
+      <h3>Student Info</h3>
+     
+       <p>
+        <strong>Student ID: </strong>
+        <%= @behavior.student_id %>
+       </p>
+      <p>
+        <strong>Date: </strong>
+        <%= @behavior.event_date%>
+      </p>
+      <p>
+        <strong>Time: </strong>
+        
+        <%= @behavior.readable_time %>
+      </p>
+      <p>
+        <strong>Location:</strong>
+        <%= @behavior.location %>
+      </p>
+      <p>
+        <strong>Peers involved:</strong>
+        <%= @behavior.peers_involved %>
+      </p>
+      <p>
+       <strong> Reffering staff:</strong>
+        <%=  @behavior.staff_id %>
+       </p>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="well well-sm col-sm-5">
+      <h3>Possible Motivation</h3>
+      <p>
+        Get peer attention value: <%= # @behavior.get_peer_attention %>
+        <%= check_box_tag 'eula', 'accepted', true, disabled: true %>
+        <%= check_box_tag(:get_peer_attention, disabled: true )  %>
+        <%= label_tag(:get_peer_attention, "Obtain peer attention") %> <br>
+        <%= check_box_tag(:get_adult_attention) %>
+        <%= label_tag(:get_adult_attention, "Obtain adult attention") %> <br>
+        <%= check_box_tag(:get_items_activities) %>
+        <%= label_tag(:get_items_activities, "Obtain items/activities") %> <br>
+        <%= check_box_tag(:avoid_task) %>
+        <%= label_tag(:avoid_task, "Avoid task or activity") %> <br>
+        <%= check_box_tag(:avoid_peer) %>
+        <%= label_tag(:avoid_peer, "Avoid peer") %> <br>
+        <%= check_box_tag(:avoid_adult) %>
+        <%= label_tag(:avoid_adult, "Avoid adult") %> <br>
+        <strong>Other: </strong>
+         <%=  @behavior.motivation %>
+      </p>
+    </div>
+  </div>
+  </div>
+</div>
+
  
-<p>
-  <strong>Last Name:</strong>
-  <%= @behavior.lName %>
-</p>
+
 <%= link_to 'Edit', edit_behavior_path(@behavior) %> <br>
 <%= link_to 'Back', behaviors_path %>
