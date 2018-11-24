@@ -4019,3 +4019,191 @@ Processing by StudentsController#index as HTML
 Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-23 20:02:16 -0700
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (68.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (22.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2876881093974743205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateParents (20181110175855)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "parents" ("id" bigserial primary key, "fName" character varying, "lName" character varying, "mName" character varying, "grade" integer, "email" character varying, "phone" integer, "homeroom_teacher" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181110175855_create_parents.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181110175855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20181110230908)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "fName" character varying, "lName" character varying, "mName" character varying, "grade" integer, "email" character varying, "phone" integer, "homeroom_teacher" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181110230908_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181110230908"]]
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStaffs (20181110231314)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "staffs" ("id" bigserial primary key, "fName" character varying, "lName" character varying, "mName" character varying, "role" character varying, "gradeTaught" integer, "email" character varying, "phone" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181110231314_create_staffs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181110231314"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateBehaviors (20181116182643)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "behaviors" ("id" bigserial primary key, "student_id" integer, "event_date" date, "event_time" time, "grade" integer, "staff_id" integer, "location" character varying, "minor_behavior" character varying, "major_behavior" character varying, "motivation" character varying, "admin_action" character varying, "time_in_office" boolean, "loss_privilege" boolean, "conference_with_student" boolean, "parent_contact" boolean, "time_out_detention" boolean, "restitution_community_service" boolean, "individualized_instruction" boolean, "counselor" boolean, "in_school_suspension" boolean, "out_school_suspension" boolean, "expulsion" boolean, "involved_none" boolean, "involved_peers" boolean, "involved_staff" boolean, "involved_teacher" boolean, "involved_substitute" boolean, "peers_involved" character varying, "staff_involved" character varying, "teachers_involved" character varying, "subsitutes_involved" character varying, "antecedent" character varying, "behavior_description" character varying, "due_process" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181116182643_create_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181116182643"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-24 03:02:45.022791"], ["updated_at", "2018-11-24 03:02:45.022791"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2876881093974743205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-11-23 20:03:05 -0700
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 746ms (Views: 722.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2018-11-23 20:03:39 -0700
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (38.8ms)
+  Rendered students/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 140ms (Views: 94.5ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-23 20:05:31 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (48.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 200ms (Views: 104.7ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2018-11-23 20:13:58 -0700
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (4.9ms)
+  Rendered students/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2018-11-23 20:14:04 -0700
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OnwyXfK7oeMhBEsIIb2QcoeNfEGFxDIu/JgGr0Xucj1DbKoDuJeWM6RxfZBnRhWYE5UDTeJ1+ANrYR0ppsoqhw==", "student"=>{"fName"=>"Billy", "lName"=>"Jean", "grade"=>"", "homeroom_teacher"=>""}, "commit"=>"Create Student"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/students_controller.rb:22
+  [1m[36mStudent Create (1.3ms)[0m  [1m[32mINSERT INTO "students" ("fName", "lName", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fName", "Billy"], ["lName", "Jean"], ["created_at", "2018-11-24 03:14:04.959564"], ["updated_at", "2018-11-24 03:14:04.959564"]]
+  ↳ app/controllers/students_controller.rb:22
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/students_controller.rb:22
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2018-11-23 20:14:04 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 66ms (Views: 56.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-11-23 20:14:06 -0700
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (0.6ms)
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:24
+  Rendered students/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-23 20:14:09 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-23 20:14:13 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (31.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 96ms (Views: 88.5ms | ActiveRecord: 2.0ms)
+
+

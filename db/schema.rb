@@ -81,10 +81,10 @@ ActiveRecord::Schema.define(version: 2018_11_16_182643) do
     t.string "fName"
     t.string "lName"
     t.string "mName"
-    t.string "grade"
+    t.integer "grade"
     t.string "email"
     t.integer "phone"
-    t.string "homeroom_teacher"
+    t.integer "homeroom_teacher"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
