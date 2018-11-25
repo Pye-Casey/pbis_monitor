@@ -10,11 +10,10 @@
   <div class="row">
   	<div class="well well-sm col-sm-6">
       <h3>Student Info</h3>
-     
-       <p>
-        <strong>Student ID: </strong>
-        <%= @behavior.student_id %>
-       </p>
+      <p>
+        <strong>Student Name: </strong>
+        <%= @behavior.student_name %>
+      </p>
       <p>
         <strong>Date: </strong>
         <%= @behavior.event_date%>
@@ -226,7 +225,75 @@
 
   </div>
 </div>
+  <div class="row well well-sm">
+    <h3>Administrative Action</h3>
+    <div class="col-sm-4">
+      
+      <% if @behavior.admin_time_office == true%>
+          <input type="checkbox" name="<%= @behavior.admin_time_office%>" value="admin_time_office" checked disabled="true" >
+          <%= label_tag(:admin_time_office, "Time in office") %> <br>
+      <% end %>
+      
+      <% if @behavior.admin_loss_privilege == true%>
+            <input type="checkbox" name="<%= @behavior.admin_loss_privilege%>" value="admin_loss_privilege" checked disabled="true" >
+            <%= label_tag(:admin_loss_privilege, "Loss of privileges") %> <br>
+        <% end %>
+      
+      <% if @behavior.admin_conference_student == true%>
+            <input type="checkbox" name="<%= @behavior.admin_conference_student%>" value="admin_conference_student" checked disabled="true" >
+            <%= label_tag(:admin_conference_student, "Conference with student") %> <br>
+        <% end %>
+      
+      <% if @behavior.admin_parent_contact == true%>
+            <input type="checkbox" name="<%= @behavior.admin_parent_contact%>" value="admin_parent_contact" checked disabled="true" >
+            <%= label_tag(:admin_parent_contact, "Parent contact") %> <br>
+        <% end %>
+    </div>
+    <div class="col-sm-4">
+      <% if @behavior.admin_detention == true%>
+            <input type="checkbox" name="<%= @behavior.admin_detention%>" value="admin_detention" checked disabled="true" >
+            <%= label_tag(:admin_detention, "Time out/detention") %> <br>
+      <% end %>
+      
+      <% if @behavior.admin_service == true%>
+            <input type="checkbox" name="<%= @behavior.admin_service%>" value="admin_service" checked disabled="true" >
+            <%= label_tag(:admin_service, "Restitution/community service") %> <br>
+        <% end %>
+      
+      <% if @behavior.admin_individual_instruction == true%>
+            <input type="checkbox" name="<%= @behavior.admin_individual_instruction%>" value="admin_individual_instruction" checked disabled="true" >
+            <%= label_tag(:admin_individual_instruction, "Individualized instruction") %> <br>
+        <% end %>
+      
+      <% if @behavior.admin_counselor == true%>
+            <input type="checkbox" name="<%= @behavior.admin_counselor%>" value="admin_counselor" checked disabled="true" >
+            <%= label_tag(:admin_counselor, "Counselor") %> <br>
+      <% end %> 
+    </div>
+    <div class="col-sm-4">
+      <% if @behavior.admin_in_school_suspension == true%>
+            <input type="checkbox" name="<%= @behavior.admin_in_school_suspension%>" value="admin_in_school_suspension" checked disabled="true" >
+            <%= label_tag(:admin_in_school_suspension, "In-school suspension") %> <br>
+        <% end %>
+      
+      <% if @behavior.admin_suspension == true%>
+            <input type="checkbox" name="<%= @behavior.admin_suspension%>" value="admin_suspension" checked disabled="true" >
+            <%= label_tag(:admin_suspension, "Out of school suspension") %> <br>
+        <% end %>
+      
+      <% if @behavior.admin_expulsion == true%>
+            <input type="checkbox" name="<%= @behavior.admin_expulsion%>" value="admin_expulsion" checked disabled="true" >
+            <%= label_tag(:admin_expulsion, "Expulsion") %> <br>
+        <% end %>
+      
+      <% unless @behavior.admin_other.nil? || @behavior.admin_other.empty? %>
+          <strong>Other administrative action: </strong>
+          <%=  @behavior.admin_other %>
+        <% end %>
 
+    </div>
+  </div>
+</div>
  
 
 <%= link_to 'Edit', edit_behavior_path(@behavior) %> <br>

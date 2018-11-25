@@ -6,7 +6,8 @@ class Behavior < ApplicationRecord
 	end
 
 	def student_name
-		Student.where(id: @behavior.student_id)
+		student = Student.find(student_id)
+		student_name = student.full_name_last
 	end
 
 end

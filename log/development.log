@@ -7336,3 +7336,372 @@ Processing by BehaviorsController#index as HTML
 Completed 200 OK in 90ms (Views: 85.5ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-24 21:35:22 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  Rendered behaviors/index.html.erb within layouts/application (208.9ms)
+Completed 200 OK in 297ms (Views: 273.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/behaviors/6" for 127.0.0.1 at 2018-11-24 21:35:25 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBehavior Load (1.9ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (206.0ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 15.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `student_name=' for #<Behavior:0x00007fe20e6bed18>
+Did you mean?  student_name
+               student_id=):
+    17:        </p>
+    18:       <p>
+    19:         <strong>Student Name: </strong>
+    20:         <%= @behavior.student_name %>
+    21:       </p>
+    22:       <p>
+    23:         <strong>Date: </strong>
+  
+app/models/behavior.rb:10:in `student_name'
+app/views/behaviors/show.html.erb:20:in `_app_views_behaviors_show_html_erb__3216222462255724564_70304440643020'
+Started GET "/behaviors/6" for 127.0.0.1 at 2018-11-24 21:35:51 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBehavior Load (1.6ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 285ms (Views: 98.4ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/behaviors/6" for 127.0.0.1 at 2018-11-24 21:36:34 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBehavior Load (1.0ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (2.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 107ms (Views: 99.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/behaviors/6" for 127.0.0.1 at 2018-11-24 21:50:29 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBehavior Load (2.6ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (215.8ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_time_office' for #<Behavior:0x00007fe200e5db68>
+Did you mean?  time_in_office):
+    229:     <h3>Administrative Action</h3>
+    230:     <div class="col-sm-4">
+    231:       
+    232:       <% if @behavior.admin_time_office == true%>
+    233:           <input type="checkbox" name="<%= @behavior.admin_time_office%>" value="admin_time_office" checked disabled="true" >
+    234:           <%= label_tag(:admin_time_office, "Time in office") %> <br>
+    235:       <% end %>
+  
+app/views/behaviors/show.html.erb:232:in `_app_views_behaviors_show_html_erb__3216222462255724564_70304327197240'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminTimeOfficeToBehaviors (20181125045211)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_time_office" boolean[0m
+  ↳ db/migrate/20181125045211_add_admin_time_office_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045211"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminLossPrivilegeToBehaviors (20181125045256)
+  [1m[35m (6.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_loss_privilege" boolean[0m
+  ↳ db/migrate/20181125045256_add_admin_loss_privilege_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045256"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminConferenceStudentToBehaviors (20181125045319)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_conference_student" boolean[0m
+  ↳ db/migrate/20181125045319_add_admin_conference_student_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045319"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminParentContactToBehaviors (20181125045341)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_parent_contact" boolean[0m
+  ↳ db/migrate/20181125045341_add_admin_parent_contact_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045341"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminDetentionToBehaviors (20181125045402)
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_detention" boolean[0m
+  ↳ db/migrate/20181125045402_add_admin_detention_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045402"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminServiceToBehaviors (20181125045417)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_service" boolean[0m
+  ↳ db/migrate/20181125045417_add_admin_service_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045417"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminIndividualInstructionToBehaviors (20181125045436)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_individual_instruction" boolean[0m
+  ↳ db/migrate/20181125045436_add_admin_individual_instruction_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045436"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminCounselorToBehaviors (20181125045456)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_counselor" boolean[0m
+  ↳ db/migrate/20181125045456_add_admin_counselor_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045456"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminInSchoolSuspensionToBehaviors (20181125045515)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_in_school_suspension" boolean[0m
+  ↳ db/migrate/20181125045515_add_admin_in_school_suspension_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045515"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminSuspensionToBehaviors (20181125045551)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_suspension" boolean[0m
+  ↳ db/migrate/20181125045551_add_admin_suspension_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045551"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminExpulsionToBehaviors (20181125045614)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_expulsion" boolean[0m
+  ↳ db/migrate/20181125045614_add_admin_expulsion_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045614"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddAdminOtherToBehaviors (20181125045655)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "behaviors" ADD "admin_other" character varying[0m
+  ↳ db/migrate/20181125045655_add_admin_other_to_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125045655"]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/behaviors/6" for 127.0.0.1 at 2018-11-24 21:57:23 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBehavior Load (1.9ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (2.8ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 349ms (Views: 136.9ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-24 21:57:45 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.7ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  Rendered behaviors/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 76ms (Views: 70.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 21:57:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 21:57:53 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:32
+  [1m[36mStaff Load (1.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (80.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (82.5ms)
+Completed 200 OK in 148ms (Views: 130.6ms | ActiveRecord: 14.4ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 21:58:32 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bhf+ocR/2GZZik9EJvSGEnzXC8mG2u+6/0Iy6kX8GflSf5468VxR5QN1AOSaZ6/LiefvsKMya8N5vqg6nfpY6Q==", "behavior"=>{"student_id"=>"2", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"25", "event_time(4i)"=>"04", "event_time(5i)"=>"57", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "get_peer_attention"=>"0", "get_adult_attention"=>"0", "get_items_activities"=>"1", "avoid_task"=>"0", "avoid_peer"=>"0", "avoid_adult"=>"0", "motivation"=>"", "minor_language"=>"0", "minor_contact"=>"0", "minor_defiance"=>"0", "minor_disruption"=>"0", "minor_property"=>"0", "minor_dress"=>"0", "minor_technology"=>"0", "minor_tardy"=>"0", "minor_other"=>"", "major_language"=>"1", "major_aggression"=>"0", "major_disrespect"=>"0", "major_habitual_disruption"=>"0", "major_dishonesty"=>"0", "major_harrassment"=>"0", "major_tardies"=>"0", "major_vandalism"=>"0", "major_theft"=>"0", "major_dress_code"=>"0", "major_drugs"=>"0", "major_weapons"=>"1", "major_other"=>"", "antecedent"=>"asdf", "behavior_description"=>"asddfasd f", "due_process"=>"asdasda sd afsd asdf", "admin_time_office"=>"1", "admin_loss_privilege"=>"1", "admin_conference_student"=>"1", "admin_parent_contact"=>"1", "admin_detention"=>"1", "admin_service"=>"1", "admin_individual_instruction"=>"1", "admin_counselor"=>"1", "admin_in_school_suspension"=>"1", "admin_suspension"=>"1", "admin_expulsion"=>"1", "admin_other"=>"Called the police"}, "commit"=>"Create Behavior"}
+Unpermitted parameters: :location, :admin_time_office, :admin_loss_privilege, :admin_conference_student, :admin_parent_contact, :admin_detention, :admin_service, :admin_individual_instruction, :admin_counselor, :admin_in_school_suspension, :admin_suspension, :admin_expulsion, :admin_other
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/behaviors_controller.rb:21
+  [1m[36mBehavior Create (3.3ms)[0m  [1m[32mINSERT INTO "behaviors" ("student_id", "event_date", "event_time", "motivation", "peers_involved", "antecedent", "behavior_description", "due_process", "created_at", "updated_at", "minor_other", "major_other", "get_peer_attention", "get_adult_attention", "get_items_activities", "avoid_task", "avoid_peer", "avoid_adult", "minor_language", "minor_contact", "minor_defiance", "minor_disruption", "minor_property", "minor_dress", "minor_technology", "minor_tardy", "major_language", "major_aggression", "major_disrespect", "major_habitual_disruption", "major_dishonesty", "major_harrassment", "major_tardies", "major_vandalism", "major_theft", "major_dress_code", "major_drugs", "major_weapons") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38) RETURNING "id"[0m  [["student_id", 2], ["event_date", "2018-11-24"], ["event_time", "04:57:00"], ["motivation", ""], ["peers_involved", ""], ["antecedent", "asdf"], ["behavior_description", "asddfasd f"], ["due_process", "asdasda sd afsd asdf"], ["created_at", "2018-11-25 04:58:32.833823"], ["updated_at", "2018-11-25 04:58:32.833823"], ["minor_other", ""], ["major_other", ""], ["get_peer_attention", false], ["get_adult_attention", false], ["get_items_activities", true], ["avoid_task", false], ["avoid_peer", false], ["avoid_adult", false], ["minor_language", false], ["minor_contact", false], ["minor_defiance", false], ["minor_disruption", false], ["minor_property", false], ["minor_dress", false], ["minor_technology", false], ["minor_tardy", false], ["major_language", true], ["major_aggression", false], ["major_disrespect", false], ["major_habitual_disruption", false], ["major_dishonesty", false], ["major_harrassment", false], ["major_tardies", false], ["major_vandalism", false], ["major_theft", false], ["major_dress_code", false], ["major_drugs", false], ["major_weapons", true]]
+  ↳ app/controllers/behaviors_controller.rb:21
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/behaviors_controller.rb:21
+Redirected to http://localhost:3000/behaviors/7
+Completed 302 Found in 26ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/behaviors/7" for 127.0.0.1 at 2018-11-24 21:58:32 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBehavior Load (5.1ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 98ms (Views: 87.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-24 22:02:02 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.4ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  Rendered behaviors/index.html.erb within layouts/application (213.2ms)
+Completed 200 OK in 280ms (Views: 255.2ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 22:02:04 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 80ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 22:02:05 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 22:02:09 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:32
+  [1m[36mStaff Load (1.4ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (112.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (115.4ms)
+Completed 200 OK in 177ms (Views: 151.5ms | ActiveRecord: 22.6ms)
+
+
+Started POST "/behaviors" for 127.0.0.1 at 2018-11-24 22:02:39 -0700
+Processing by BehaviorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ay4ifDOvE6glHNw5NfCLNtXqmAEEBhy1+RCS40j7V3w/RkLnBoyaK3/jk5mJY6LvINp8eCHumMx/7AgzkP0WbA==", "behavior"=>{"student_id"=>"1", "event_date(1i)"=>"2018", "event_date(2i)"=>"11", "event_date(3i)"=>"24", "event_time(1i)"=>"2018", "event_time(2i)"=>"11", "event_time(3i)"=>"25", "event_time(4i)"=>"05", "event_time(5i)"=>"02", "location"=>"", "peers_involved"=>"", "staff_id"=>"", "get_peer_attention"=>"1", "get_adult_attention"=>"0", "get_items_activities"=>"0", "avoid_task"=>"0", "avoid_peer"=>"0", "avoid_adult"=>"0", "motivation"=>"", "minor_language"=>"0", "minor_contact"=>"0", "minor_defiance"=>"0", "minor_disruption"=>"0", "minor_property"=>"0", "minor_dress"=>"0", "minor_technology"=>"0", "minor_tardy"=>"0", "minor_other"=>"", "major_language"=>"1", "major_aggression"=>"1", "major_disrespect"=>"0", "major_habitual_disruption"=>"0", "major_dishonesty"=>"0", "major_harrassment"=>"0", "major_tardies"=>"0", "major_vandalism"=>"0", "major_theft"=>"0", "major_dress_code"=>"0", "major_drugs"=>"0", "major_weapons"=>"0", "major_other"=>"", "antecedent"=>"a", "behavior_description"=>"s", "due_process"=>"d", "admin_time_office"=>"1", "admin_loss_privilege"=>"1", "admin_conference_student"=>"1", "admin_parent_contact"=>"1", "admin_detention"=>"1", "admin_service"=>"1", "admin_individual_instruction"=>"1", "admin_counselor"=>"1", "admin_in_school_suspension"=>"1", "admin_suspension"=>"1", "admin_expulsion"=>"1", "admin_other"=>"testing"}, "commit"=>"Create Behavior"}
+Unpermitted parameter: :location
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/behaviors_controller.rb:21
+  [1m[36mBehavior Create (2.3ms)[0m  [1m[32mINSERT INTO "behaviors" ("student_id", "event_date", "event_time", "motivation", "peers_involved", "antecedent", "behavior_description", "due_process", "created_at", "updated_at", "minor_other", "major_other", "get_peer_attention", "get_adult_attention", "get_items_activities", "avoid_task", "avoid_peer", "avoid_adult", "minor_language", "minor_contact", "minor_defiance", "minor_disruption", "minor_property", "minor_dress", "minor_technology", "minor_tardy", "major_language", "major_aggression", "major_disrespect", "major_habitual_disruption", "major_dishonesty", "major_harrassment", "major_tardies", "major_vandalism", "major_theft", "major_dress_code", "major_drugs", "major_weapons", "admin_time_office", "admin_loss_privilege", "admin_conference_student", "admin_parent_contact", "admin_detention", "admin_service", "admin_individual_instruction", "admin_counselor", "admin_in_school_suspension", "admin_suspension", "admin_expulsion", "admin_other") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48, $49, $50) RETURNING "id"[0m  [["student_id", 1], ["event_date", "2018-11-24"], ["event_time", "05:02:00"], ["motivation", ""], ["peers_involved", ""], ["antecedent", "a"], ["behavior_description", "s"], ["due_process", "d"], ["created_at", "2018-11-25 05:02:39.261784"], ["updated_at", "2018-11-25 05:02:39.261784"], ["minor_other", ""], ["major_other", ""], ["get_peer_attention", true], ["get_adult_attention", false], ["get_items_activities", false], ["avoid_task", false], ["avoid_peer", false], ["avoid_adult", false], ["minor_language", false], ["minor_contact", false], ["minor_defiance", false], ["minor_disruption", false], ["minor_property", false], ["minor_dress", false], ["minor_technology", false], ["minor_tardy", false], ["major_language", true], ["major_aggression", true], ["major_disrespect", false], ["major_habitual_disruption", false], ["major_dishonesty", false], ["major_harrassment", false], ["major_tardies", false], ["major_vandalism", false], ["major_theft", false], ["major_dress_code", false], ["major_drugs", false], ["major_weapons", false], ["admin_time_office", true], ["admin_loss_privilege", true], ["admin_conference_student", true], ["admin_parent_contact", true], ["admin_detention", true], ["admin_service", true], ["admin_individual_instruction", true], ["admin_counselor", true], ["admin_in_school_suspension", true], ["admin_suspension", true], ["admin_expulsion", true], ["admin_other", "testing"]]
+  ↳ app/controllers/behaviors_controller.rb:21
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/behaviors_controller.rb:21
+Redirected to http://localhost:3000/behaviors/8
+Completed 302 Found in 24ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/behaviors/8" for 127.0.0.1 at 2018-11-24 22:02:39 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBehavior Load (1.7ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 116ms (Views: 107.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-24 22:03:31 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  Rendered behaviors/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 70ms (Views: 66.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 22:03:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-24 22:03:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-24 22:03:38 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/behaviors/_form.html.erb:32
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:53
+  Rendered behaviors/_form.html.erb (45.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 113ms (Views: 109.3ms | ActiveRecord: 1.2ms)
+
+

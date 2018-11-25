@@ -71,7 +71,7 @@
 
         <%= form.check_box(:avoid_peer) %>
         <%= label_tag(:avoid_peer, "Avoid peer") %> <br>
-        
+
         <%= form.check_box(:avoid_adult) %>
         <%= label_tag(:avoid_adult, "Avoid adult") %> <br>
         <%= form.label :"Other:" %>
@@ -201,10 +201,11 @@
       <%= form.text_field :admin_other %>
 
     </div>
-    <p>
+    
+  </div>
+  <p>
       <%= form.submit({:class => 'btn button-primary'}) %>
     </p>
-  </div>
   </div>
     
   </div>
