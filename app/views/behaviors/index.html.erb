@@ -1,28 +1,26 @@
-<%= render "layouts/header" %>
+
 <h1>Listing Behaviors</h1>
  <br/>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li><%= link_to 'Home', controller: 'welcome' %></li>
-    </ul>
-  </div>
-</nav>
-
+ 
 <table>
   <tr>
     <th>Student ID</th>
     <th>Event Date</th>
     <th>Time</th>
+    <th>Description</th>
+    <th>View</th>
   </tr>
 
-<% @behaviors.each do |behavior| %>
-	<tr>
-    <td><%= behavior.student_id %></td>
-    <td><%= behavior.event_date %></td>
-    <td><%= behavior.readable_time %></td>
-	</tr>
+  <% @behavior.each do |behave| %>
+    <tr>
+      <td><%= behave.student_id %></td>
+      <td><%= behave.event_date %></td>
+      <td><%= behave.event_time %></td>
+      <td><%= behave.behavior_description %></td>
+      <td><%= link_to 'Show', behavior_path(behave) %></td>
+    </tr>
   <% end %>
+
 </table>
 <br>
 <%= link_to 'Home', controller: 'welcome' %>

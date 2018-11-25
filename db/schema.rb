@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_24_211825) do
+ActiveRecord::Schema.define(version: 2018_11_25_031104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,32 @@ ActiveRecord::Schema.define(version: 2018_11_24_211825) do
     t.datetime "updated_at", null: false
     t.string "minor_other"
     t.string "major_other"
+    t.boolean "get_peer_attention"
+    t.boolean "get_adult_attention"
+    t.boolean "get_items_activities"
+    t.boolean "avoid_task"
+    t.boolean "avoid_peer"
+    t.boolean "avoid_adult"
+    t.boolean "minor_language"
+    t.boolean "minor_contact"
+    t.boolean "minor_defiance"
+    t.boolean "minor_disruption"
+    t.boolean "minor_property"
+    t.boolean "minor_dress"
+    t.boolean "minor_technology"
+    t.boolean "minor_tardy"
+    t.boolean "major_language"
+    t.boolean "major_aggression"
+    t.boolean "major_disrespect"
+    t.boolean "major_habitual_disruption"
+    t.boolean "major_dishonesty"
+    t.boolean "major_harrassment"
+    t.boolean "major_tardies"
+    t.boolean "major_vandalism"
+    t.boolean "major_theft"
+    t.boolean "major_dress_code"
+    t.boolean "major_drugs"
+    t.boolean "major_weapons"
   end
 
   create_table "parents", force: :cascade do |t|
