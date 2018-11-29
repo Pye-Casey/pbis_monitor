@@ -7705,3 +7705,1133 @@ Processing by BehaviorsController#new as HTML
 Completed 200 OK in 113ms (Views: 109.3ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:36:45 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.4ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  Rendered behaviors/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/behaviors/1" for 127.0.0.1 at 2018-11-28 19:39:23 -0700
+Processing by BehaviorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBehavior Load (1.0ms)[0m  [1m[34mSELECT  "behaviors".* FROM "behaviors" WHERE "behaviors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/behaviors_controller.rb:7
+  Rendering behaviors/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 101ms (Views: 93.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:39:28 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.3ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  Rendered behaviors/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 87ms (Views: 83.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:48:50 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (9.0ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 152ms (Views: 139.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:53:29 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.6ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  Rendered behaviors/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 83ms (Views: 76.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:53:32 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (6.7ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  [1m[36mCACHE Student Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:18
+  Rendered behaviors/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 84ms (Views: 73.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:55:11 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.8ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/behaviors/index.html.erb:19
+  Rendered behaviors/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 92ms (Views: 85.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:55:57 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (1081.5ms)
+Completed 500 Internal Server Error in 1088ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `info”' for #<#<Class:0x00007fe20d0292d8>:0x00007fe2080a61e8>):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <%= logger.info(“session info” + session.inspect) %>
+    19:       <td><% Student.find_by(id: behave.student_id)%></td>
+    20:       <td><%= behave.event_date %></td>
+    21:       <td><%= behave.event_time %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb___3598011098057542348_70304387120260'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb___3598011098057542348_70304387120260'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:57:04 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (230.5ms)
+Completed 200 OK in 302ms (Views: 257.7ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:57:19 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (255.2ms)
+Completed 200 OK in 1300ms (Views: 1239.1ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:59:19 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.3ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (243.4ms)
+Completed 200 OK in 306ms (Views: 264.0ms | ActiveRecord: 36.7ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 19:59:33 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.4ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:00:54 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (206.8ms)
+Completed 200 OK in 305ms (Views: 293.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:05:32 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.4ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (1046.3ms)
+Completed 500 Internal Server Error in 1053ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student_id' for #<#<Class:0x00007f06f6815fc0>:0x00007f06e82ec890>
+Did you mean?  student_url):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% Student.find(student_id).full_name_last%></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.event_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__95659508189775241_69833820958500'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__95659508189775241_69833820958500'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:06:08 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.3ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (191.2ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_name_last' for #<Behavior:0x00007f06e876b498>):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% behave.full_name_last%></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.event_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__95659508189775241_69833823033100'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__95659508189775241_69833823033100'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:07:04 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (306.0ms)
+Completed 200 OK in 392ms (Views: 360.0ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:07:58 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.9ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (239.8ms)
+Completed 200 OK in 303ms (Views: 269.5ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:10:56 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (312.3ms)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `student_name' for #<Behavior:0x00007f06e86f23b8>
+Did you mean?  student_name=):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% behave.student_name%></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.event_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__95659508189775241_69833887286940'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__95659508189775241_69833887286940'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:11:14 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (249.6ms)
+Completed 200 OK in 322ms (Views: 291.9ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:13:05 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (194.9ms)
+Completed 200 OK in 298ms (Views: 285.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:13:30 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (198.0ms)
+Completed 200 OK in 274ms (Views: 263.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:14:17 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.0ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (251.5ms)
+Completed 200 OK in 937ms (Views: 880.0ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:14:49 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.4ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (243.2ms)
+Completed 200 OK in 306ms (Views: 273.9ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:15:22 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (204.5ms)
+Completed 200 OK in 274ms (Views: 263.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:15:54 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 86ms (Views: 81.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:16:34 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (35.2ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_last_name' for nil:NilClass):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% behave.student_name.full_last_name%></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.readable_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__1984375358624884323_69832580624720'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__1984375358624884323_69832580624720'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:17:24 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (221.1ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_last_name' for nil:NilClass):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% behave.student_name.full_last_name%></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.readable_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__1984375358624884323_69832687337040'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__1984375358624884323_69832687337040'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:17:37 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 81ms (Views: 76.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:18:23 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (221.7ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<Student:0x00007f06626b5f98>):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% behave.student_name%></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.readable_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/models/behavior.rb:10:in `student_name'
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__1984375358624884323_69832581950540'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__1984375358624884323_69832581950540'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:18:38 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.0ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (239.6ms)
+Completed 200 OK in 310ms (Views: 281.8ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:19:18 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (209.2ms)
+Completed 200 OK in 273ms (Views: 265.0ms | ActiveRecord: 2.2ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2876881093974743205)[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:21:14 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.5ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (200.9ms)
+Completed 200 OK in 262ms (Views: 254.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:24:38 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.3ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (198.9ms)
+Completed 200 OK in 270ms (Views: 258.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:25:41 -0700
+Processing by BehaviorsController#index as HTML
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 7.0ms)
+
+
+  
+NameError (undefined local variable or method `student_id' for #<Class:0x00007f0654ba98a0>):
+  
+app/models/behavior.rb:3:in `<class:Behavior>'
+app/models/behavior.rb:1:in `<main>'
+app/controllers/behaviors_controller.rb:3:in `index'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:26:54 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  Rendered behaviors/index.html.erb within layouts/application (240.8ms)
+Completed 200 OK in 313ms (Views: 284.0ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:28:23 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  Rendered behaviors/index.html.erb within layouts/application (196.2ms)
+Completed 200 OK in 257ms (Views: 249.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:28:55 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (1.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  Rendered behaviors/index.html.erb within layouts/application (328.5ms)
+Completed 200 OK in 427ms (Views: 401.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:29:21 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.0ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  Rendered behaviors/index.html.erb within layouts/application (227.8ms)
+Completed 200 OK in 293ms (Views: 264.5ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:30:52 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  Rendered behaviors/index.html.erb within layouts/application (243.8ms)
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 19.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column students.behavior_id does not exist
+LINE 1: SELECT  "students".* FROM "students" WHERE "students"."behav...
+                                                   ^
+: SELECT  "students".* FROM "students" WHERE "students"."behavior_id" = $1 LIMIT $2):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% behave.name%></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.readable_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/models/behavior.rb:18:in `name'
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__1984375358624884323_69832579232860'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__1984375358624884323_69832579232860'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:31:07 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:17
+  Rendered behaviors/index.html.erb within layouts/application (230.9ms)
+Completed 200 OK in 300ms (Views: 269.5ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:31:36 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  Rendered behaviors/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/casey/monitor3/app/views/behaviors/index.html.erb:18: syntax error, unexpected tIVAR, expecting '('
+...  <td>'.freeze; behave.@student;@output_buffer.safe_append='...
+...                       ^~~~~~~~):
+  
+app/views/behaviors/index.html.erb:18: syntax error, unexpected tIVAR, expecting '('
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:34:24 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (162.0ms)
+Completed 200 OK in 247ms (Views: 219.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:38:52 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.6ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (1010.6ms)
+Completed 500 Internal Server Error in 1017ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student_id' for #<#<Class:0x00007f065c146f68>:0x00007f06618c6950>
+Did you mean?  student_url):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% @students.find(student_id).full_name_last %></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.readable_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__1984375358624884323_69832691573440'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__1984375358624884323_69832691573440'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:39:06 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (4.6ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (1117.1ms)
+Completed 500 Internal Server Error in 1126ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student_id' for #<#<Class:0x00007f065c146f68>:0x00007f06547fa830>
+Did you mean?  student_url):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% @student.find(student_id).full_name_last %></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.readable_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__1984375358624884323_69832582093340'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__1984375358624884323_69832582093340'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:39:27 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (2.6ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  Rendered behaviors/index.html.erb within layouts/application (991.0ms)
+Completed 500 Internal Server Error in 997ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x00007f065c146f68>:0x00007f0654a57268>
+Did you mean?  student_url):
+    15:   <% @behavior.each do |behave| %>
+    16:     <tr>
+    17:       <td><%= behave.student_id %></td>
+    18:       <td><% student.find(student_id).full_name_last %></td>
+    19:       <td><%= behave.event_date %></td>
+    20:       <td><%= behave.readable_time %></td>
+    21:       <td><%= behave.behavior_description %></td>
+  
+app/views/behaviors/index.html.erb:18:in `block in _app_views_behaviors_index_html_erb__1984375358624884323_69832583331480'
+app/views/behaviors/index.html.erb:15:in `_app_views_behaviors_index_html_erb__1984375358624884323_69832583331480'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:39:41 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.3ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  Rendered behaviors/index.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 144ms (Views: 125.7ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:40:26 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.4ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:15
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:10
+  Rendered behaviors/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:44:15 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.2ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (211.3ms)
+Completed 200 OK in 277ms (Views: 266.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-28 20:44:31 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  [1m[36mBehavior Load (1.1ms)[0m  [1m[34mSELECT "behaviors".* FROM "behaviors"[0m
+  ↳ app/views/behaviors/index.html.erb:14
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mStudent Load (6.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/behavior.rb:9
+  Rendered behaviors/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 82ms (Views: 72.0ms | ActiveRecord: 7.7ms)
+
+
