@@ -6,7 +6,13 @@ class Behavior < ApplicationRecord
 	end
 
 	def student_name
-		Student.find(student_id).full_name_last
+		# check if there is a student id
+		if student_id
+			Student.find(student_id).full_name_last
+		else
+			"unknown"
+		end
+
 	end
 
 
