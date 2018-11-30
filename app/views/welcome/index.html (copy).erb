@@ -1,0 +1,52 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<div class="jumbotron text-center">
+	<h1>PBIS Monitor</h1>
+	<p>Stage 1: CRUD operations</p>
+	<p>Stage 2: Bootstrap</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-4">
+      <h3>Parents</h3>
+      <p>The following demonstrate CRUD control for parents table.</p>
+     	<%= link_to 'Parents', controller: 'parents' %><br>
+		<%= link_to 'Add parents', new_parent_path %><br>
+    </div>
+    <div class="col-sm-12 col-lg-4">
+      <h3>Students</h3>
+      <p>The following demonstrate CRUD control for students table.</p>
+      	<%= link_to 'Students', controller: 'students' %><br>
+		<%= link_to 'Add students', new_student_path %><br>
+    </div>
+    <div class="col-sm-12 col-lg-4">
+      <h3>Staff</h3>
+      <p>The following demonstrate CRUD control for staffs table.</p>
+      	<%= link_to 'Staff Members', controller: 'staffs' %><br>
+		<%= link_to 'Add staff', new_staff_path %><br>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-sm-12 col-lg-4">
+      <h3>Behaviors</h3>
+      <p>The following demonstrate CRUD control for parents table.</p>
+     	<%= link_to 'Behaviors', controller: 'behaviors' %><br>
+		<%= link_to 'Add Behaviors', new_behavior_path %><br>
+    </div>
+    <div class="col-sm-12 col-lg-4">
+      <h3>Login</h3>
+      <p>The following is a link to the Login page</p>
+      <%= link_to 'Login', controller: 'login' %><br>
+    </div>
+    <div class="col-sm-12 col-lg-4">
+      <h3>Admin Page</h3>
+      <p>The following is a link to the admin page.</p>
+      <%= link_to 'Admin', controller: 'admin' %><br>
+    </div>
+  </div>
+</div>

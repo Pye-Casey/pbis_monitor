@@ -1,52 +1,151 @@
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
 
-<div class="jumbotron text-center">
-	<h1>PBIS Monitor</h1>
-	<p>Stage 1: CRUD operations</p>
-	<p>Stage 2: Bootstrap</p>
-</div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-lg-4">
-      <h3>Parents</h3>
-      <p>The following demonstrate CRUD control for parents table.</p>
-     	<%= link_to 'Parents', controller: 'parents' %><br>
-		<%= link_to 'Add parents', new_parent_path %><br>
+    <title>PBIS Monitor</title>
+
+    <!-- Bootstrap core CSS-->
+    <%= stylesheet_link_tag "bootstrap.min.css" %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag "freelancer.min.css" %>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">PBIS Monitor</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#testing">Testing</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto img-rounded" src="/images/logo.png" alt="">
+        <%= image_tag("logo.png", class:'img-fluid mb-5 d-block mx-auto img-rounded', alt:"logo") %>
+        <h1 class="text-uppercase mb-0">PBIS Monitor</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">View Student Behavior Reports - Report Student Behavior Anywhere </h2>
+      </div>
+    </header>
+
+    <! Testing Section -->
+    <section class="bg-primary text-white mb-0" id="testing">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Testing</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-sm-12 col-lg-4">
+            <h3>Parents</h3>
+            <p>The following demonstrate CRUD control for parents table.</p>
+            <%= link_to 'Parents', controller: 'parents' , class:"btn btn-primary" %><br>
+
+            <%= link_to 'Add parents', new_parent_path, class:"btn btn-primary" %><br>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <h3>Students</h3>
+            <p>The following demonstrate CRUD control for students table.</p>
+              <%= link_to 'Students', controller: 'students', class:"btn btn-primary" %><br>
+          <%= link_to 'Add students', new_student_path, class:"btn btn-primary" %><br>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <h3>Staff</h3>
+            <p>The following demonstrate CRUD control for staffs table.</p>
+              <%= link_to 'Staff Members', controller: 'staffs', class:"btn btn-primary" %><br>
+          <%= link_to 'Add staff', new_staff_path, class:"btn btn-primary" %><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-lg-4">
+            <h3>Behaviors</h3>
+            <p>The following demonstrate CRUD control for parents table.</p>
+            <%= link_to 'Behaviors', controller: 'behaviors', class:"btn btn-primary" %><br>
+          <%= link_to 'Add Behaviors', new_behavior_path , class:"btn btn-primary"%><br>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <h3>Login</h3>
+            <p>The following is a link to the Login page</p>
+            <%= link_to 'Login', controller: 'login', class:"btn btn-primary" %><br>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <h3>Admin Page</h3>
+            <p>The following is a link to the admin page.</p>
+            <%= link_to 'Admin', controller: 'admin', class:"btn btn-primary" %><br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">About</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">Of course I am using a template... I ain't waisting time on this.</p>
+          </div>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">PBIS Monitor is a student behavior loggin software. Report problem behaviors on any internet enabled device. View reports on the spot.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; PBIS Monitor 2018</small>
+      </div>
     </div>
-    <div class="col-sm-12 col-lg-4">
-      <h3>Students</h3>
-      <p>The following demonstrate CRUD control for students table.</p>
-      	<%= link_to 'Students', controller: 'students' %><br>
-		<%= link_to 'Add students', new_student_path %><br>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
     </div>
-    <div class="col-sm-12 col-lg-4">
-      <h3>Staff</h3>
-      <p>The following demonstrate CRUD control for staffs table.</p>
-      	<%= link_to 'Staff Members', controller: 'staffs' %><br>
-		<%= link_to 'Add staff', new_staff_path %><br>
-    </div>
-  </div>
-  <div class="row">
-  	<div class="col-sm-12 col-lg-4">
-      <h3>Behaviors</h3>
-      <p>The following demonstrate CRUD control for parents table.</p>
-     	<%= link_to 'Behaviors', controller: 'behaviors' %><br>
-		<%= link_to 'Add Behaviors', new_behavior_path %><br>
-    </div>
-    <div class="col-sm-12 col-lg-4">
-      <h3>Login</h3>
-      <p>The following is a link to the Login page</p>
-      <%= link_to 'Login', controller: 'login' %><br>
-    </div>
-    <div class="col-sm-12 col-lg-4">
-      <h3>Admin Page</h3>
-      <p>The following is a link to the admin page.</p>
-      <%= link_to 'Admin', controller: 'admin' %><br>
-    </div>
-  </div>
-</div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
