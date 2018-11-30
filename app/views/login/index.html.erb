@@ -1,102 +1,99 @@
 <%= render "layouts/header" %>
-<!-- BEGIN # BOOTSNIP INFO -->
-<div class="container">
-	<div class="row">
-		<h1 class="text-center">Modal Login with jQuery Effects</h1>
-        <p class="text-center"><a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Open Login Modal</a></p>
-	</div>
-</div>
-<!-- END # BOOTSNIP INFO -->
+<head>
 
-<!-- BEGIN # MODAL LOGIN -->
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    	<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header" align="center">
-					<img class="img-circle" id="img_logo" src="http://bootsnipp.com/img/logo.jpg">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-					</button>
-				</div>
-                
-                <!-- Begin # DIV Form -->
-                <div id="div-forms">
-                
-                    <!-- Begin # Login Form -->
-                    <form id="login-form">
-		                <div class="modal-body">
-				    		<div id="div-login-msg">
-                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-login-msg">Type your username and password.</span>
-                            </div>
-				    		<input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-				    		<input id="login_password" class="form-control" type="password" placeholder="Password" required>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div>
-        		    	</div>
-				        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
-                            </div>
-				    	    <div>
-                                <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-                                <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
-				        </div>
-                    </form>
-                    <!-- End # Login Form -->
-                    
-                    <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
-    	    		    <div class="modal-body">
-		    				<div id="div-lost-msg">
-                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
-                            </div>
-		    				<input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
-            			</div>
-		    		    <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
-		    		    </div>
-                    </form>
-                    <!-- End | Lost Password Form -->
-                    
-                    <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;">
-            		    <div class="modal-body">
-		    				<div id="div-register-msg">
-                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register an account.</span>
-                            </div>
-		    				<input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
-            			</div>
-		    		    <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
-                            </div>
-                            <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-                            </div>
-		    		    </div>
-                    </form>
-                    <!-- End | Register Form -->
-                    
-                </div>
-                <!-- End # DIV Form -->
-                
-			</div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <!-- Bootstrap core CSS-->
+    <%= stylesheet_link_tag "bootstrap.min.css" %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <%= stylesheet_link_tag "freelancer.min.css" %>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">PBIS Monitor</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/welcome/index.erb">Home</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+    <%= form_with model: @login, local: true do |form| %>
+      <div class="container">
+       	<h1 class="text-uppercase mb-0">PBIS Monitor</h1>
+        <br>
+		<div class="container" id="login-panel">
+		<div class="row">
+		    <div class="col-md-4 col-md-offset-4">
+		        <div class="login-panel panel panel-default">
+		            <div class="panel-heading">
+		                <h3 class="panel-title">Please Sign In</h3>
+		            </div>
+		            <div class="panel-body">
+		                <form role="form">
+		                    <fieldset>
+		                        <div class="form-group">
+		                            <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus> <br>
+		                           
+		                        </div>
+		                        <div class="form-group">
+		                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
+		                        </div>
+		                        
+		                        <!-- Change this to a button or input when using this as a form -->
+		                        <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+		                    </fieldset>
+		                </form>
+		            </div>
+		        </div>
+		    </div>
 		</div>
-	</div>
-    <!-- END # MODAL LOGIN -->
+		</div>
+	<% end %>
+        
+        
+      </div>
+    </header>
+
+    
+
+    <!-- Copyright -->
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; PBIS Monitor 2018</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+
+    
+
+  </body>
