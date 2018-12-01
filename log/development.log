@@ -56983,3 +56983,435 @@ Processing by AdminController#index as HTML
 Completed 200 OK in 188ms (Views: 185.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:15:24 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 192ms (Views: 190.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/icons.html" for 127.0.0.1 at 2018-11-30 21:15:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/icons.html"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:15:50 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 178ms (Views: 176.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:16:01 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 186ms (Views: 184.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:23:22 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 173ms (Views: 171.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:23:27 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 165ms (Views: 162.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/grid.html" for 127.0.0.1 at 2018-11-30 21:23:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/grid.html"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:24:05 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 196ms (Views: 193.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:26:04 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 178ms (Views: 176.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:26:45 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 183ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:27:01 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 186ms (Views: 184.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:27:57 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 205ms (Views: 203.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:28:18 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 175ms (Views: 172.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:29:04 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 176ms (Views: 173.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:29:42 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 212ms (Views: 209.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:30:18 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 173ms (Views: 170.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:32:00 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 169ms (Views: 166.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:32:29 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 182ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:33:02 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 173ms (Views: 171.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:33:21 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 175ms (Views: 173.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:33:52 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 192ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:40:11 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 181ms (Views: 178.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:43:09 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 196ms (Views: 192.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:43:26 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 173ms (Views: 170.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:47:04 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 197ms (Views: 194.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:49:34 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 175ms (Views: 172.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:50:10 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 193ms (Views: 187.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:50:35 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 191ms (Views: 186.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:51:54 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 197ms (Views: 195.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:55:04 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 180ms (Views: 177.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login.html" for 127.0.0.1 at 2018-11-30 21:55:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/login.html"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:55:08 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 171ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:55:57 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 191ms (Views: 188.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:56:49 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 179ms (Views: 177.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:57:38 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 172ms (Views: 170.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:57:56 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 189ms (Views: 186.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:58:38 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 189ms (Views: 186.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 21:59:16 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 177ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:00:14 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 197ms (Views: 195.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:00:43 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 188ms (Views: 185.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:01:19 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 172ms (Views: 170.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:02:32 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 201ms (Views: 198.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:03:14 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 177ms (Views: 174.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login.html" for 127.0.0.1 at 2018-11-30 22:03:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/login.html"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:03:22 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 170ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:03:41 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 173ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:04:19 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 161ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.html" for 127.0.0.1 at 2018-11-30 22:04:43 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 164ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
