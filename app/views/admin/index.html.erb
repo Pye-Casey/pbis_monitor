@@ -18,7 +18,7 @@
     <!-- Morris Charts CSS -->
     <%= stylesheet_link_tag "morris.css" %>
     <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -908,17 +908,15 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <%= javascript_include_tag "jquery.min.js"%>
-    <!-- Bootstrap Core JavaScript -->
-    <%= javascript_include_tag "bootstrap.min.js"%>
-    <!-- Metis Menu Plugin JavaScript -->
-    <%= javascript_include_tag "metisMenu.min.js"%>
-    <!-- Morris Charts JavaScript -->
-    <%= javascript_include_tag "raphael.min.js"%>
-    <!--<%= javascript_include_tag "morris.min.js"%>-->
-    <!--<%= javascript_include_tag "morris-data.js"%>-->
-    <!-- Custom Theme JavaScript -->
-    <%= javascript_include_tag "sb-admin-2.js"%>
-</body>
+    <!-- jQuery <script src="https://cdn.jsdelivr.net/npm/jquery"></script>-->
+    <%= javascript_include_tag "jquery.min.js" %>
 
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min.js" %>
+    <!-- Metis Menu Plugin JavaScript <script src="https://unpkg.com/metismenu"></script>-->
+    <%= javascript_include_tag "metisMenu.min.js" %>
+
+    <!-- Morris Charts JavaScript -->
+    <%= javascript_include_tag "raphael.min.js" %>
+    <%= javascript_include_tag "morris.min.js" %>
+</body>
