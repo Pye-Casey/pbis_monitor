@@ -12,5 +12,20 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+#CSS Files
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
 Rails.application.config.assets.precompile += %w( freelancer.min.css )
+Rails.application.config.assets.precompile += %w( sb-admin-2.css )
+Rails.application.config.assets.precompile += %w( metisMenu.min.css )
+Rails.application.config.assets.precompile += %w( morris.css )
+Rails.application.config.assets.precompile += %w( font-awesome.min.css )
+
+#Java Script Files
+Rails.application.config.assets.precompile += %w( jquery.min.js )
+Rails.application.config.assets.precompile += %w( bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( metisMenu.min.js )
+Rails.application.config.assets.precompile += %w( raphael.min.js )
+Rails.application.config.assets.precompile += %w( morris.min.js )
+Rails.application.config.assets.precompile += %w( morris-data.js )
+Rails.application.config.assets.precompile += %w( sb-admin-2.js )
