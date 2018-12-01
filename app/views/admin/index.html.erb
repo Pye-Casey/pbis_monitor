@@ -12,13 +12,14 @@
     <!-- Bootstrap Core CSS -->
     <%= stylesheet_link_tag "bootstrap.min.css" %>
     <!-- MetisMenu CSS -->
-    <%= stylesheet_link_tag "metisMenu.min.css" %>
+    <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css">
     <!-- Custom CSS -->
     <%= stylesheet_link_tag "sb-admin-2.css" %>
     <!-- Morris Charts CSS -->
     <%= stylesheet_link_tag "morris.css" %>
-    <!-- Custom Fonts -->
-    <%= stylesheet_link_tag "font-awesome.min.css" %>
+    <!-- Custom Fonts   -->  
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
+    
 </head>
 
 <body>
@@ -716,11 +717,12 @@
 
     <!-- jQuery -->
     <%= javascript_include_tag "jquery.min.js" %>
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
     <!-- Bootstrap Core JavaScript -->
     <%= javascript_include_tag "bootstrap.min.js" %>
     <!-- Metis Menu Plugin JavaScript -->
     <%= javascript_include_tag "metisMenu.min.js" %>
+    <script src="https://unpkg.com/metismenu"></script>
     <!-- Morris Charts JavaScript -->
     <%= javascript_include_tag "raphael.min.js" %>
     <%= javascript_include_tag "morris.min.js" %>
