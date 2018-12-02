@@ -1,27 +1,173 @@
-
-<h1>Listing Behaviors</h1>
- <br/>
  
-<table>
-  <tr>
-    <th>Student</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Description</th>
-    <th>View</th>
-  </tr>
 
-  <% @behavior.each do |behave| %>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin - PBIS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- MetisMenu CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css">
+    <!-- Custom CSS -->
+    <%= stylesheet_link_tag "sb-admin-2.css" %>
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready( function () {
+        $('#studentTable').DataTable();
+        console.log("Document ready");
+      } );
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">asdaf sdafsd fa</span>
+                    <span class="icon-bar">asadfasddfdsa</span>
+                    <span class="icon-bar">hgfjkfghjfghj</span>
+                </button> -->
+                <a class="navbar-brand" href="index.html">PBIS Monitor</a>
+            </div>
+            <!-- /.navbar-header -->
+
+           
+
+            <ul class="nav navbar-top-links navbar-right">
+                
+                 <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-edit fa-fw"></i> <i class="fa "></i>
+                      Behavior Event
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-plus-circle"></i> Add Event</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-eye fa-fw"></i> View Events</a>
+                        </li>
+                        
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-users fa-fw"></i> <i class="fa "></i>
+                      Students
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-plus-circle fa-fw"></i> Add Student</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-search fa-fw"></i> View Students</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-user fa-fw"></i> <i class="fa "></i>
+                      Staff
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-plus-circle fa-fw"></i> Add Staff</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-search fa-fw"></i> View Staff</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                </li>
+                <!-- /.dropdown -->
+                
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="" class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Listing Behavior Events</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            
+            <!-- NEED TO ADD NEW TABLE HERE -->
+          <div >
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Student Behavior Table
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="studentTable">
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Description</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <% @behavior.each do |behave| %>
+                                    <tr>
+                                      <td><%= behave.student_name%></td>
+                                      <td><%= behave.event_date %></td>
+                                      <td><%= behave.readable_time %></td>
+                                      <td><%= behave.behavior_description %></td>
+                                      <td><%= link_to 'Show', behavior_path(behave) %></td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>                               
+                            </table>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            
+        </div>
+        <!-- /#page-wrapper -->
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+        <%= link_to 'Home', controller: 'welcome' %>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <%= javascript_include_tag "jquery.min.js" %>
+
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min.js" %>
     
-    <tr>
-      <td><%= behave.student_name%></td>
-      <td><%= behave.event_date %></td>
-      <td><%= behave.readable_time %></td>
-      <td><%= behave.behavior_description %></td>
-      <td><%= link_to 'Show', behavior_path(behave) %></td>
-    </tr>
-  <% end %>
+</body>
 
-</table>
-<br>
-<%= link_to 'Home', controller: 'welcome' %>

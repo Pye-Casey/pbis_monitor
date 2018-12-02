@@ -15,5 +15,15 @@ class Behavior < ApplicationRecord
 
 	end
 
+	def staff_name
+		# check if there is a student id
+		if staff_id
+			Staff.find(staff_id).full_name_last
+		else
+			"unknown"
+		end
+
+	end
+
 
 end

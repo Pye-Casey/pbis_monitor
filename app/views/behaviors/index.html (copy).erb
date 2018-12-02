@@ -1,0 +1,27 @@
+
+<h1>Listing Behaviors</h1>
+ <br/>
+ 
+<table>
+  <tr>
+    <th>Student</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Description</th>
+    <th>View</th>
+  </tr>
+
+  <% @behavior.each do |behave| %>
+    
+    <tr>
+      <td><%= behave.student_name%></td>
+      <td><%= behave.event_date %></td>
+      <td><%= behave.readable_time %></td>
+      <td><%= behave.behavior_description %></td>
+      <td><%= link_to 'Show', behavior_path(behave) %></td>
+    </tr>
+  <% end %>
+
+</table>
+<br>
+<%= link_to 'Home', controller: 'welcome' %>

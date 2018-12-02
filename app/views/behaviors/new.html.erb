@@ -1,6 +1,5 @@
  
-<%= link_to 'Back', behaviors_path %>
-<!--  -->
+
 
 <head>
 
@@ -18,8 +17,6 @@
     <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css">
     <!-- Custom CSS -->
     <%= stylesheet_link_tag "sb-admin-2.css" %>
-    <!-- Morris Charts CSS -->
-    <%= stylesheet_link_tag "morris.css" %>
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -107,11 +104,11 @@
             </div>
             <!-- /.row -->
             
-            <%= render 'form2' %>
+            <%= render 'form' %>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
-
+        <%= link_to 'Back', behaviors_path %>
     </div>
     <!-- /#wrapper -->
 
@@ -120,10 +117,5 @@
 
     <!-- Bootstrap Core JavaScript -->
     <%= javascript_include_tag "bootstrap.min.js" %>
-    <!-- Metis Menu Plugin JavaScript -->
-    <%= javascript_include_tag "metisMenu.min.js" %>
-
-    <!-- Morris Charts JavaScript -->
-    <%= javascript_include_tag "raphael.min.js" %>
-    <%= javascript_include_tag "morris.min.js" %>
+    
 </body>

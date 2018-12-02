@@ -1,300 +1,472 @@
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-<div class="container">
-  <h2>Behavior Referral View</h2>
-  <p>Here are the details to the incident:</p>
-  <div class="row">
-  	<div class="well well-sm col-sm-6">
-      <h3>Student Info</h3>
-      <p>
-        <strong>Student Name: </strong>
-        <%= @behavior.student_name %>
-      </p>
-      <p>
-        <strong>Date: </strong>
-        <%= @behavior.event_date%>
-      </p>
-      <p>
-        <strong>Time: </strong>
-        
-        <%= @behavior.readable_time %>
-      </p>
-      <p>
-        <strong>Location:</strong>
-        <%= @behavior.location %>
-      </p>
-      <p>
-        <strong>Peers involved:</strong>
-        <%= @behavior.peers_involved %>
-      </p>
-      <p>
-       <strong> Reffering staff:</strong>
-        <%=  @behavior.staff_id %>
-       </p>
-    </div>
-    <div class="col-sm-1"></div>
-    <div class="well well-sm col-sm-5">
-      <h3>Possible Motivation</h3>
-      <p>
-        <!TESTING CONDITIONALS !>
-        <% if @behavior.get_peer_attention == true%>
-            <input type="checkbox" name="<%= @behavior.get_peer_attention%>" value="get_peer_attention" checked disabled="true" >
-            <%= label_tag(:get_peer_attention, "Obtain peer attention") %> <br>
-        <% end %>
-        <% if @behavior.get_adult_attention == true%>
-            <input type="checkbox" name="<%= @behavior.get_adult_attention%>" value="get_adult_attention" checked disabled="true" >
-            <%= label_tag(:get_adult_attention, "Obtain adult attention") %> <br>
-        <% end %>
-        <% if @behavior.get_items_activities == true%>
-            <input type="checkbox" name="<%= @behavior.get_items_activities%>" value="get_items_activities" checked disabled="true" >
-            <%= label_tag(:get_items_activities, "Obtain items/activities") %> <br>
-        <% end %>
-        <% if @behavior.avoid_task == true%>
-            <input type="checkbox" name="<%= @behavior.avoid_task%>" value="avoid_task" checked disabled="true" >
-            <%= label_tag(:avoid_task, "Avoid task or activity") %> <br>
-        <% end %>
-        <% if @behavior.avoid_peer == true%>
-            <input type="checkbox" name="<%= @behavior.avoid_peer%>" value="avoid_peer" checked disabled="true" >
-            <%= label_tag(:avoid_peer, "Avoid peer") %> <br>
-        <% end %>
-       <% if @behavior.avoid_adult == true%>
-            <input type="checkbox" name="<%= @behavior.avoid_adult%>" value="avoid_adult" checked disabled="true" >
-            <%= label_tag(:avoid_adult, "Avoid adult") %> <br>
-        <% end %>
-        
-        <% unless @behavior.motivation.nil? || @behavior.motivation.empty? %>
-          <strong>Other motivation: </strong>
-          <%=  @behavior.motivation %>
-        <% end %>
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="well well-sm col-sm-6">
-      <h3>Minor Problem Behavior</h3>
-      <p>
-        
-        <% if @behavior.minor_language == true%>
-            <input type="checkbox" name="<%= @behavior.minor_language%>" value="minor_language" checked disabled="true" >
-            <%= label_tag(:minor_language, "Inappropriate language") %> <br>
-        <% end %>
-        
-        <% if @behavior.minor_contact == true%>
-            <input type="checkbox" name="<%= @behavior.minor_contact%>" value="minor_contact" checked disabled="true" >
-            <%= label_tag(:minor_contact, "Physical contact/aggression") %> <br>
-        <% end %>
-        
-        <% if @behavior.minor_defiance == true%>
-            <input type="checkbox" name="<%= @behavior.minor_defiance%>" value="minor_defiance" checked disabled="true" >
-            <%= label_tag(:minor_defiance, "Defiance/non-compliance") %> <br>
-        <% end %>
-        
-        <% if @behavior.minor_disruption == true%>
-            <input type="checkbox" name="<%= @behavior.minor_disruption%>" value="minor_disruption" checked disabled="true" >
-            <%= label_tag(:minor_disruption, "Disruption") %> <br>
-        <% end %>
-
-        <% if @behavior.minor_property == true%>
-            <input type="checkbox" name="<%= @behavior.minor_property%>" value="minor_property" checked disabled="true" >
-            <%= label_tag(:minor_property, "Property misuse") %> <br>
-        <% end %>
-       
-        <% if @behavior.minor_dress == true%>
-            <input type="checkbox" name="<%= @behavior.minor_dress%>" value="minor_dress" checked disabled="true" >
-            <%= label_tag(:minor_dress, "Dress code violation") %> <br>
-        <% end %>
-        
-        <% if @behavior.minor_technology == true%>
-            <input type="checkbox" name="<%= @behavior.minor_technology%>" value="minor_technology" checked disabled="true" >
-            <%= label_tag(:minor_technology, "Technology violation") %> <br>
-        <% end %>
-
-        <% if @behavior.minor_tardy == true%>
-            <input type="checkbox" name="<%= @behavior.minor_tardy%>" value="minor_tardy" checked disabled="true" >
-            <%= label_tag(:minor_tardy, "Tardy") %> <br>
-        <% end %>
-        
-        <% unless @behavior.motivation.nil? || @behavior.motivation.empty? %>
-          <strong>Other minor behavior: </strong>
-          <%=  @behavior.minor_other %>
-        <% end %>
-
-      </p>
-    </div>
-    <div class="col-sm-1"></div>
-    <div class="well well-sm col-sm-5">
-      <h3>Major Problem Behavior</h3>
-      <p>
-        <% if @behavior.major_language == true%>
-            <input type="checkbox" name="<%= @behavior.major_language%>" value="major_language" checked disabled="true" >
-            <%= label_tag(:major_language, "Abusive/Inappropriate language") %> <br>
-        <% end %>
-       
-        <% if @behavior.major_aggression == true%>
-            <input type="checkbox" name="<%= @behavior.major_aggression%>" value="major_aggression" checked disabled="true" >
-            <%= label_tag(:major_aggression, "Fighting/aggression") %> <br>
-        <% end %>
-       
-        <% if @behavior.major_disrespect == true%>
-            <input type="checkbox" name="<%= @behavior.major_disrespect%>" value="major_disrespect" checked disabled="true" >
-            <%= label_tag(:major_disrespect, "Disrespect/non-compliance") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_habitual_disruption == true%>
-            <input type="checkbox" name="<%= @behavior.major_habitual_disruption%>" value="major_habitual_disruption" checked disabled="true" >
-            <%= label_tag(:major_habitual_disruption, "Habitual disruption") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_dishonesty == true%>
-            <input type="checkbox" name="<%= @behavior.major_dishonesty%>" value="major_dishonesty" checked disabled="true" >
-            <%= label_tag(:major_dishonesty, "Lying/cheating") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_harrassment == true%>
-            <input type="checkbox" name="<%= @behavior.major_harrassment%>" value="major_harrassment" checked disabled="true" >
-            <%= label_tag(:major_harrassment, "Harrassment/bullying") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_tardies == true%>
-            <input type="checkbox" name="<%= @behavior.major_tardies%>" value="major_tardies" checked disabled="true" >
-            <%= label_tag(:major_tardies, "Repeated tardies") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_vandalism == true%>
-            <input type="checkbox" name="<%= @behavior.major_vandalism%>" value="major_vandalism" checked disabled="true" >
-            <%= label_tag(:major_vandalism, "Vandalism") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_theft == true%>
-            <input type="checkbox" name="<%= @behavior.major_theft%>" value="major_theft" checked disabled="true" >
-            <%= label_tag(:major_theft, "Theft") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_dress_code == true%>
-            <input type="checkbox" name="<%= @behavior.major_dress_code%>" value="major_dress_code" checked disabled="true" >
-            <%= label_tag(:major_dress_code, "Chronic dress code violation") %> <br>
-        <% end %>
-       
-        <% if @behavior.major_drugs == true%>
-            <input type="checkbox" name="<%= @behavior.major_drugs%>" value="major_drugs" checked disabled="true" >
-            <%= label_tag(:major_drugs, "Drugs") %> <br>
-        <% end %>
-        
-        <% if @behavior.major_weapons == true%>
-            <input type="checkbox" name="<%= @behavior.major_weapons%>" value="major_weapons" checked disabled="true" >
-            <%= label_tag(:major_weapons, "Weapons") %> <br>
-        <% end %>
-        
-        <% unless @behavior.major_other.nil? || @behavior.major_other.empty? %>
-          <strong>Other major behavior: </strong>
-          <%=  @behavior.major_other %>
-        <% end %>
-       
-      </p>
-    </div>
-
-    </div>
-    
-    <div class="row">
-    <div class="well well-sm col-sm-12">
-      <h3>Comments</h3>
-      <div class="col-sm-4">
-        <p>
-        
-        <strong>Antecedent: What happened before?</strong>
-        <br>
-        <%= @behavior.antecedent%>
-      </p>
-      </div>
-      <div class="col-sm-4">
-        <p>
-        <strong>Behavior: What did the student do?</strong><br>
-        <%= @behavior.behavior_description%>
-      </p>
-      </div>
-      <div class="col-sm-4">
-        <p>
-        <strong>Due process: Get others perspectives if needed.</strong> <br>
-        <%= @behavior.due_process%>
-      </p>
-      </div>
-
-  </div>
-</div>
-  <div class="row well well-sm">
-    <h3>Administrative Action</h3>
-    <div class="col-sm-4">
-      
-      <% if @behavior.admin_time_office == true%>
-          <input type="checkbox" name="<%= @behavior.admin_time_office%>" value="admin_time_office" checked disabled="true" >
-          <%= label_tag(:admin_time_office, "Time in office") %> <br>
-      <% end %>
-      
-      <% if @behavior.admin_loss_privilege == true%>
-            <input type="checkbox" name="<%= @behavior.admin_loss_privilege%>" value="admin_loss_privilege" checked disabled="true" >
-            <%= label_tag(:admin_loss_privilege, "Loss of privileges") %> <br>
-        <% end %>
-      
-      <% if @behavior.admin_conference_student == true%>
-            <input type="checkbox" name="<%= @behavior.admin_conference_student%>" value="admin_conference_student" checked disabled="true" >
-            <%= label_tag(:admin_conference_student, "Conference with student") %> <br>
-        <% end %>
-      
-      <% if @behavior.admin_parent_contact == true%>
-            <input type="checkbox" name="<%= @behavior.admin_parent_contact%>" value="admin_parent_contact" checked disabled="true" >
-            <%= label_tag(:admin_parent_contact, "Parent contact") %> <br>
-        <% end %>
-    </div>
-    <div class="col-sm-4">
-      <% if @behavior.admin_detention == true%>
-            <input type="checkbox" name="<%= @behavior.admin_detention%>" value="admin_detention" checked disabled="true" >
-            <%= label_tag(:admin_detention, "Time out/detention") %> <br>
-      <% end %>
-      
-      <% if @behavior.admin_service == true%>
-            <input type="checkbox" name="<%= @behavior.admin_service%>" value="admin_service" checked disabled="true" >
-            <%= label_tag(:admin_service, "Restitution/community service") %> <br>
-        <% end %>
-      
-      <% if @behavior.admin_individual_instruction == true%>
-            <input type="checkbox" name="<%= @behavior.admin_individual_instruction%>" value="admin_individual_instruction" checked disabled="true" >
-            <%= label_tag(:admin_individual_instruction, "Individualized instruction") %> <br>
-        <% end %>
-      
-      <% if @behavior.admin_counselor == true%>
-            <input type="checkbox" name="<%= @behavior.admin_counselor%>" value="admin_counselor" checked disabled="true" >
-            <%= label_tag(:admin_counselor, "Counselor") %> <br>
-      <% end %> 
-    </div>
-    <div class="col-sm-4">
-      <% if @behavior.admin_in_school_suspension == true%>
-            <input type="checkbox" name="<%= @behavior.admin_in_school_suspension%>" value="admin_in_school_suspension" checked disabled="true" >
-            <%= label_tag(:admin_in_school_suspension, "In-school suspension") %> <br>
-        <% end %>
-      
-      <% if @behavior.admin_suspension == true%>
-            <input type="checkbox" name="<%= @behavior.admin_suspension%>" value="admin_suspension" checked disabled="true" >
-            <%= label_tag(:admin_suspension, "Out of school suspension") %> <br>
-        <% end %>
-      
-      <% if @behavior.admin_expulsion == true%>
-            <input type="checkbox" name="<%= @behavior.admin_expulsion%>" value="admin_expulsion" checked disabled="true" >
-            <%= label_tag(:admin_expulsion, "Expulsion") %> <br>
-        <% end %>
-      
-      <% unless @behavior.admin_other.nil? || @behavior.admin_other.empty? %>
-          <strong>Other administrative action: </strong>
-          <%=  @behavior.admin_other %>
-        <% end %>
-
-    </div>
-  </div>
-</div>
  
 
-<%= link_to 'Edit', edit_behavior_path(@behavior) %> <br>
-<%= link_to 'Back', behaviors_path %>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Event View</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- MetisMenu CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css">
+    <!-- Custom CSS -->
+    <%= stylesheet_link_tag "sb-admin-2.css" %>
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">asdaf sdafsd fa</span>
+                    <span class="icon-bar">asadfasddfdsa</span>
+                    <span class="icon-bar">hgfjkfghjfghj</span>
+                </button> -->
+                <a class="navbar-brand" href="index.html">PBIS Monitor</a>
+            </div>
+            <!-- /.navbar-header -->
+
+           
+
+            <ul class="nav navbar-top-links navbar-right">
+                
+                 <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-edit fa-fw"></i> <i class="fa "></i>
+                      Behavior Event
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-plus-circle"></i> Add Event</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-eye fa-fw"></i> View Events</a>
+                        </li>
+                        
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-users fa-fw"></i> <i class="fa "></i>
+                      Students
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-plus-circle fa-fw"></i> Add Student</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-search fa-fw"></i> View Students</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-user fa-fw"></i> <i class="fa "></i>
+                      Staff
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-plus-circle fa-fw"></i> Add Staff</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-search fa-fw"></i> View Staff</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                </li>
+                <!-- /.dropdown -->
+                
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="" class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">View Behavior Event</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Behavior Event
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h3>Basic Info</h3>
+                                    <div >
+                                        <div class="form-group">
+                                            <strong>Select Student:</strong>
+                                            <%= @behavior.student_name %>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong>Date: </strong>
+                                            <%= @behavior.event_date%>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong>Time: </strong>
+                                            <%= @behavior.readable_time %>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong>Location:</strong>
+                                            <%= @behavior.location %>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong>Peers involved:</strong>
+                                            <%= @behavior.peers_involved %>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong>Reffering staff:</strong>
+                                            <%=  @behavior.staff_name %>
+
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                    <h3>Possible Motivation</h3>
+                                    <div>
+                                        <div class="form-group">
+                                          <% if @behavior.get_peer_attention == true%>
+                                              <input type="checkbox" name="<%= @behavior.get_peer_attention%>" value="get_peer_attention" checked disabled="true" >
+                                              <%= label_tag(:get_peer_attention, "Obtain peer attention") %> <br>
+                                          <% end %>
+                                          <% if @behavior.get_adult_attention == true%>
+                                              <input type="checkbox" name="<%= @behavior.get_adult_attention%>" value="get_adult_attention" checked disabled="true" >
+                                              <%= label_tag(:get_adult_attention, "Obtain adult attention") %> <br>
+                                          <% end %>
+                                          <% if @behavior.get_items_activities == true%>
+                                              <input type="checkbox" name="<%= @behavior.get_items_activities%>" value="get_items_activities" checked disabled="true" >
+                                              <%= label_tag(:get_items_activities, "Obtain items/activities") %> <br>
+                                          <% end %>
+                                          <% if @behavior.avoid_task == true%>
+                                              <input type="checkbox" name="<%= @behavior.avoid_task%>" value="avoid_task" checked disabled="true" >
+                                              <%= label_tag(:avoid_task, "Avoid task or activity") %> <br>
+                                          <% end %>
+                                          <% if @behavior.avoid_peer == true%>
+                                              <input type="checkbox" name="<%= @behavior.avoid_peer%>" value="avoid_peer" checked disabled="true" >
+                                              <%= label_tag(:avoid_peer, "Avoid peer") %> <br>
+                                          <% end %>
+                                         <% if @behavior.avoid_adult == true%>
+                                              <input type="checkbox" name="<%= @behavior.avoid_adult%>" value="avoid_adult" checked disabled="true" >
+                                              <%= label_tag(:avoid_adult, "Avoid adult") %> <br>
+                                          <% end %>
+                                          
+                                          <% unless @behavior.motivation.nil? || @behavior.motivation.empty? %>
+                                            <strong>Other motivation: </strong>
+                                            <%=  @behavior.motivation %>
+                                          <% end %>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Behavior Types
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h3>Minor Problem Behaviors</h3>
+                                <div>
+                                    <div class="form-group">
+                                      <% if @behavior.minor_language == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_language%>" value="minor_language" checked disabled="true" >
+                                          <%= label_tag(:minor_language, "Inappropriate language") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.minor_contact == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_contact%>" value="minor_contact" checked disabled="true" >
+                                          <%= label_tag(:minor_contact, "Physical contact/aggression") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.minor_defiance == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_defiance%>" value="minor_defiance" checked disabled="true" >
+                                          <%= label_tag(:minor_defiance, "Defiance/non-compliance") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.minor_disruption == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_disruption%>" value="minor_disruption" checked disabled="true" >
+                                          <%= label_tag(:minor_disruption, "Disruption") %> <br>
+                                      <% end %>
+
+                                      <% if @behavior.minor_property == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_property%>" value="minor_property" checked disabled="true" >
+                                          <%= label_tag(:minor_property, "Property misuse") %> <br>
+                                      <% end %>
+                                     
+                                      <% if @behavior.minor_dress == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_dress%>" value="minor_dress" checked disabled="true" >
+                                          <%= label_tag(:minor_dress, "Dress code violation") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.minor_technology == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_technology%>" value="minor_technology" checked disabled="true" >
+                                          <%= label_tag(:minor_technology, "Technology violation") %> <br>
+                                      <% end %>
+
+                                      <% if @behavior.minor_tardy == true%>
+                                          <input type="checkbox" name="<%= @behavior.minor_tardy%>" value="minor_tardy" checked disabled="true" >
+                                          <%= label_tag(:minor_tardy, "Tardy") %> <br>
+                                      <% end %>
+                                      
+                                      <% unless @behavior.motivation.nil? || @behavior.motivation.empty? %>
+                                        <strong>Other minor behavior: </strong>
+                                        <%=  @behavior.minor_other %>
+                                      <% end %>
+                                    </div>
+                                </div>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                <h3>Major Problem Behaviors</h3>
+                                <div>
+                                    <div class="form-group">
+                                      <% if @behavior.major_language == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_language%>" value="major_language" checked disabled="true" >
+                                          <%= label_tag(:major_language, "Abusive/Inappropriate language") %> <br>
+                                      <% end %>
+                                     
+                                      <% if @behavior.major_aggression == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_aggression%>" value="major_aggression" checked disabled="true" >
+                                          <%= label_tag(:major_aggression, "Fighting/aggression") %> <br>
+                                      <% end %>
+                                     
+                                      <% if @behavior.major_disrespect == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_disrespect%>" value="major_disrespect" checked disabled="true" >
+                                          <%= label_tag(:major_disrespect, "Disrespect/non-compliance") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_habitual_disruption == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_habitual_disruption%>" value="major_habitual_disruption" checked disabled="true" >
+                                          <%= label_tag(:major_habitual_disruption, "Habitual disruption") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_dishonesty == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_dishonesty%>" value="major_dishonesty" checked disabled="true" >
+                                          <%= label_tag(:major_dishonesty, "Lying/cheating") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_harrassment == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_harrassment%>" value="major_harrassment" checked disabled="true" >
+                                          <%= label_tag(:major_harrassment, "Harrassment/bullying") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_tardies == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_tardies%>" value="major_tardies" checked disabled="true" >
+                                          <%= label_tag(:major_tardies, "Repeated tardies") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_vandalism == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_vandalism%>" value="major_vandalism" checked disabled="true" >
+                                          <%= label_tag(:major_vandalism, "Vandalism") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_theft == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_theft%>" value="major_theft" checked disabled="true" >
+                                          <%= label_tag(:major_theft, "Theft") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_dress_code == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_dress_code%>" value="major_dress_code" checked disabled="true" >
+                                          <%= label_tag(:major_dress_code, "Chronic dress code violation") %> <br>
+                                      <% end %>
+                                     
+                                      <% if @behavior.major_drugs == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_drugs%>" value="major_drugs" checked disabled="true" >
+                                          <%= label_tag(:major_drugs, "Drugs") %> <br>
+                                      <% end %>
+                                      
+                                      <% if @behavior.major_weapons == true%>
+                                          <input type="checkbox" name="<%= @behavior.major_weapons%>" value="major_weapons" checked disabled="true" >
+                                          <%= label_tag(:major_weapons, "Weapons") %> <br>
+                                      <% end %>
+                                      
+                                      <% unless @behavior.major_other.nil? || @behavior.major_other.empty? %>
+                                        <strong>Other major behavior: </strong>
+                                        <%=  @behavior.major_other %>
+                                      <% end %>   
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+          
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Comments
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                <div>
+                                    <div class="form-group col-lg-4">
+                                      <strong>Antecedent: What happened before?</strong>
+                                      <br>
+                                      <%= @behavior.antecedent%>
+                                    </div>
+                                    <div class="form-group col-lg-4">
+                                      <strong>Behavior: What did the student do?</strong><br>
+                                      <%= @behavior.behavior_description%>
+                                    </div>
+                                    <div class="form-group col-lg-4">
+                                        <strong>Due process: Get others perspectives if needed.</strong> <br>
+                                        <%= @behavior.due_process%>
+                                    </div>
+                                </div>
+                                    
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Administrative Action
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group col-lg-4">
+                              <% if @behavior.admin_time_office == true%>
+                                  <input type="checkbox" name="<%= @behavior.admin_time_office%>" value="admin_time_office" checked disabled="true" >
+                                  <%= label_tag(:admin_time_office, "Time in office") %> <br>
+                              <% end %>
+                              
+                              <% if @behavior.admin_loss_privilege == true%>
+                                    <input type="checkbox" name="<%= @behavior.admin_loss_privilege%>" value="admin_loss_privilege" checked disabled="true" >
+                                    <%= label_tag(:admin_loss_privilege, "Loss of privileges") %> <br>
+                                <% end %>
+                              
+                              <% if @behavior.admin_conference_student == true%>
+                                    <input type="checkbox" name="<%= @behavior.admin_conference_student%>" value="admin_conference_student" checked disabled="true" >
+                                    <%= label_tag(:admin_conference_student, "Conference with student") %> <br>
+                                <% end %>
+                              
+                              <% if @behavior.admin_parent_contact == true%>
+                                    <input type="checkbox" name="<%= @behavior.admin_parent_contact%>" value="admin_parent_contact" checked disabled="true" >
+                                    <%= label_tag(:admin_parent_contact, "Parent contact") %> <br>
+                              <% end %>
+                            </div>
+                            <div class="form-group col-lg-4">
+                              <% if @behavior.admin_detention == true%>
+                                    <input type="checkbox" name="<%= @behavior.admin_detention%>" value="admin_detention" checked disabled="true" >
+                                    <%= label_tag(:admin_detention, "Time out/detention") %> <br>
+                              <% end %>
+                              
+                              <% if @behavior.admin_service == true%>
+                                    <input type="checkbox" name="<%= @behavior.admin_service%>" value="admin_service" checked disabled="true" >
+                                    <%= label_tag(:admin_service, "Restitution/community service") %> <br>
+                                <% end %>
+                              
+                              <% if @behavior.admin_individual_instruction == true%>
+                                    <input type="checkbox" name="<%= @behavior.admin_individual_instruction%>" value="admin_individual_instruction" checked disabled="true" >
+                                    <%= label_tag(:admin_individual_instruction, "Individualized instruction") %> <br>
+                                <% end %>
+                              
+                              <% if @behavior.admin_counselor == true%>
+                                    <input type="checkbox" name="<%= @behavior.admin_counselor%>" value="admin_counselor" checked disabled="true" >
+                                    <%= label_tag(:admin_counselor, "Counselor") %> <br>
+                              <% end %> 
+                            </div>
+                            <div class="form-group col-lg-4">
+                              <% if @behavior.admin_in_school_suspension == true%>
+                                  <input type="checkbox" name="<%= @behavior.admin_in_school_suspension%>" value="admin_in_school_suspension" checked disabled="true" >
+                                  <%= label_tag(:admin_in_school_suspension, "In-school suspension") %> <br>
+                              <% end %>
+                            
+                            <% if @behavior.admin_suspension == true%>
+                                  <input type="checkbox" name="<%= @behavior.admin_suspension%>" value="admin_suspension" checked disabled="true" >
+                                  <%= label_tag(:admin_suspension, "Out of school suspension") %> <br>
+                              <% end %>
+                            
+                            <% if @behavior.admin_expulsion == true%>
+                                  <input type="checkbox" name="<%= @behavior.admin_expulsion%>" value="admin_expulsion" checked disabled="true" >
+                                  <%= label_tag(:admin_expulsion, "Expulsion") %> <br>
+                              <% end %>
+                            
+                            <% unless @behavior.admin_other.nil? || @behavior.admin_other.empty? %>
+                                <strong>Other administrative action: </strong>
+                                <%=  @behavior.admin_other %>
+                            <% end %>
+                            </div>
+                            
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+        <%= link_to 'Edit', edit_behavior_path(@behavior) %> <br>
+        <%= link_to 'Back', behaviors_path %>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <%= javascript_include_tag "jquery.min.js" %>
+
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min.js" %>
+    
+</body>
+
