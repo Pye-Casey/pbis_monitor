@@ -64525,3 +64525,26 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 180ms (Views: 178.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/welcome/index" for 127.0.0.1 at 2018-12-02 19:59:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 189ms (Views: 186.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/index.erb" for 127.0.0.1 at 2018-12-02 19:59:46 -0700
+Processing by LoginController#index as 
+  Rendering login/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered login/index.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 222ms (Views: 205.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-02 19:59:49 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  Rendered admin/index.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 214ms (Views: 197.7ms | ActiveRecord: 0.0ms)
+
+
