@@ -64563,3 +64563,52 @@ Processing by LoginController#index as
 Completed 200 OK in 240ms (Views: 217.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login/index.erb" for 127.0.0.1 at 2018-12-02 20:15:30 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by LoginController#index as 
+  Rendering login/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered login/index.html.erb within layouts/application (1195.9ms)
+Completed 200 OK in 1712ms (Views: 1671.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index.erb" for 127.0.0.1 at 2018-12-02 20:15:38 -0700
+Processing by WelcomeController#index as 
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 187ms (Views: 170.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index?class=btn+btn-primary" for 127.0.0.1 at 2018-12-02 20:15:43 -0700
+Processing by AdminController#index as HTML
+  Parameters: {"class"=>"btn btn-primary"}
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  Rendered admin/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 185ms (Views: 182.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-12-02 20:15:45 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 210ms (Views: 207.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/index.erb" for 127.0.0.1 at 2018-12-02 20:15:46 -0700
+Processing by LoginController#index as 
+  Rendering login/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered login/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 217ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-02 20:15:50 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  Rendered admin/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 214ms (Views: 198.9ms | ActiveRecord: 0.0ms)
+
+
