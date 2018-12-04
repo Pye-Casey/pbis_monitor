@@ -70,3 +70,7 @@ gem 'simple_form'
 
 # Gem for sb admin base 2
 gem 'bootstrap_sb_admin_base_v2'
+
+# Gem for Chart Kick
+gem 'chartkick'
+gem 'groupdate'

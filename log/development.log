@@ -64637,3 +64637,297 @@ Processing by AdminController#index as
 Completed 200 OK in 215ms (Views: 198.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 20:38:26 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.5ms)
+  Rendered admin/index.html.erb within layouts/application (40064.2ms)
+Completed 200 OK in 41091ms (Views: 41048.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 20:46:09 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  Rendered admin/index.html.erb within layouts/application (503.0ms)
+Completed 200 OK in 1005ms (Views: 957.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 20:48:48 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (2.0ms)
+  Rendered admin/index.html.erb within layouts/application (70.8ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    47:                         <!-- /.panel-heading -->
+    48:                         <div class="panel-body">
+    49:                             <div id="morris-area-chart"></div>
+    50:                             <%= pie_chart[["football", 10], ["Basketball", 5]] %>
+    51:                         </div>
+    52:                         <!-- /.panel-body -->
+    53:                     </div>
+  
+app/views/admin/index.html.erb:50:in `_app_views_admin_index_html_erb___1560238415613739701_69877144249600'
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 20:49:25 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  Rendered admin/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 213ms (Views: 196.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 20:50:40 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  Rendered admin/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 235ms (Views: 215.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 20:52:04 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  Rendered admin/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 233ms (Views: 216.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:00:10 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.6ms)
+  Rendered admin/index.html.erb within layouts/application (47.2ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `events' for nil:NilClass):
+    58:                         <!-- /.panel-heading -->
+    59:                         <div class="panel-body">
+    60:                             <div id=""></div>
+    61:                             <%= line_chart @behavior.events.group(:date).sum() %>
+    62:                         </div>
+    63:                         <!-- /.panel-body -->
+    64:                     </div>
+  
+app/views/admin/index.html.erb:61:in `_app_views_admin_index_html_erb___1560238415613739701_47248907378620'
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:03:11 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  Rendered admin/index.html.erb within layouts/application (54.5ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `behaviors' for nil:NilClass):
+    58:                         <!-- /.panel-heading -->
+    59:                         <div class="panel-body">
+    60:                             <div id=""></div>
+    61:                             <%= line_chart @behavior.behaviors.group(:date).sum() %>
+    62:                         </div>
+    63:                         <!-- /.panel-body -->
+    64:                     </div>
+  
+app/views/admin/index.html.erb:61:in `_app_views_admin_index_html_erb___1560238415613739701_69877315832060'
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:06:40 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  Rendered admin/index.html.erb within layouts/application (155.2ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 19.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `group_by_day' for #<Class:0x00007f1b28d40a40>):
+    58:                         <!-- /.panel-heading -->
+    59:                         <div class="panel-body">
+    60:                             <div id=""></div>
+    61:                             <%= line_chart Behavior.group_by_day(:date).count %>
+    62:                         </div>
+    63:                         <!-- /.panel-body -->
+    64:                     </div>
+  
+app/views/admin/index.html.erb:61:in `_app_views_admin_index_html_erb___1560238415613739701_69877143783820'
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:08:57 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_date_timestamptz_at_time_zone_etc_utc_at_time_zo FROM "behaviors" WHERE (date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (760.3ms)
+Completed 500 Internal Server Error in 820ms (ActiveRecord: 14.1ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "date" does not exist
+LINE 1: SELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (date::time...
+                                                          ^
+: SELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_date_timestamptz_at_time_zone_etc_utc_at_time_zo FROM "behaviors" WHERE (date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'):
+    58:                         <!-- /.panel-heading -->
+    59:                         <div class="panel-body">
+    60:                             <div id=""></div>
+    61:                             <%= line_chart Behavior.group_by_day(:date).count %>
+    62:                         </div>
+    63:                         <!-- /.panel-body -->
+    64:                     </div>
+  
+app/views/admin/index.html.erb:61:in `_app_views_admin_index_html_erb___1062300006188932088_70148395499080'
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:10:31 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (72.8ms)
+Completed 200 OK in 326ms (Views: 300.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:13:31 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('hour', (event_time::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_hour_event_time_timestamptz_at_time_zone_etc_utc_at_ FROM "behaviors" WHERE (event_time IS NOT NULL) GROUP BY (DATE_TRUNC('hour', (event_time::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:72
+  Rendered admin/index.html.erb within layouts/application (60.7ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 6.9ms)
+
+
+  
+ActionView::Template::Error (PG::CannotCoerce: ERROR:  cannot cast type time without time zone to timestamp with time zone
+LINE 1: ...T(*) AS count_all, (DATE_TRUNC('hour', (event_time::timestam...
+                                                             ^
+: SELECT COUNT(*) AS count_all, (DATE_TRUNC('hour', (event_time::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_hour_event_time_timestamptz_at_time_zone_etc_utc_at_ FROM "behaviors" WHERE (event_time IS NOT NULL) GROUP BY (DATE_TRUNC('hour', (event_time::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'):
+    69:                         <!-- /.panel-heading -->
+    70:                         <div class="panel-body">
+    71:                             <div id=""></div>
+    72:                             <%= line_chart Behavior.group_by_hour(:event_time).count %>
+    73:                         </div>
+    74:                         <!-- /.panel-body -->
+    75:                     </div>
+  
+app/views/admin/index.html.erb:72:in `_app_views_admin_index_html_erb___1062300006188932088_70148360350460'
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:13:58 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.1ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('hour', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_hour_event_date_timestamptz_at_time_zone_etc_utc_at_ FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('hour', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:72
+  Rendered admin/index.html.erb within layouts/application (98.4ms)
+Completed 200 OK in 305ms (Views: 286.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:14:41 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (67.7ms)
+Completed 200 OK in 264ms (Views: 249.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:15:06 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 240ms (Views: 223.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:16:26 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 222ms (Views: 204.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:17:51 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 236ms (Views: 218.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:20:19 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 264ms (Views: 243.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:21:51 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 227ms (Views: 209.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:23:39 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 239ms (Views: 222.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:28:05 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.2ms)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  Rendered admin/index.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 230ms (Views: 205.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:29:31 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:61
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:94
+  Rendered admin/index.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 244ms (Views: 229.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/index.erb" for 127.0.0.1 at 2018-12-03 21:29:57 -0700
+Processing by AdminController#index as 
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (1.3ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:82
+  Rendered admin/index.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 219ms (Views: 205.0ms | ActiveRecord: 0.8ms)
+
+
