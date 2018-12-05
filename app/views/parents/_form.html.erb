@@ -1,3 +1,12 @@
+<%= render "layouts/header" %>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><%= link_to 'Home', controller: 'welcome' %></li>
+    </ul>
+  </div>
+</nav>
+
 <%= form_with model: @parent, local: true do |form| %>
  
   <% if @parent.errors.any? %>
@@ -13,9 +22,13 @@
       </ul>
     </div>
   <% end %>
- 
+ <div class = "container">
+	<div class ="row">
+		 <div class = "col-sm">
+		 </div>
+	<div class = "col-sm">
   <p>
-    <%= form.label :"First Name" %><br>
+    <%= form.label :"First Namse" %><br>
     <%= form.text_field :fName %>
   </p>
  
@@ -29,3 +42,6 @@
   </p>
  
 <% end %>
+		<div>
+	<div>
+<div>
