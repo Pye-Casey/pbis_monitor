@@ -65053,3 +65053,36 @@ Processing by AdminController#index as HTML
 Completed 200 OK in 1882ms (Views: 1845.8ms | ActiveRecord: 9.9ms)
 
 
+Started GET "/admin/index" for 127.0.0.1 at 2018-12-04 20:47:27 -0700
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (1042.9ms)
+Completed 500 Internal Server Error in 1077ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( Chart.bundle.js )` to `config/initializers/assets.rb` and restart your server):
+    18:     <!-- Custom Fonts -->
+    19:     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    20: 
+    21:     <%= javascript_include_tag 'application', 'Chart.bundle', 'chartkick', 'data-turbolinks-track': 'reload' %>
+    22:   
+    23: 
+    24: </head>
+  
+app/views/admin/index.html.erb:21:in `_app_views_admin_index_html_erb___3255925973689600493_46921477294780'
+Started GET "/admin/index" for 127.0.0.1 at 2018-12-04 20:48:14 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (6.2ms)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:83
+  Rendered admin/index.html.erb within layouts/application (1133.9ms)
+Completed 200 OK in 1273ms (Views: 1222.7ms | ActiveRecord: 9.2ms)
+
+
