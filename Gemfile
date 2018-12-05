@@ -72,5 +72,5 @@ gem 'simple_form'
 gem 'bootstrap_sb_admin_base_v2'
 
 # Gem for Chart Kick
-gem 'chartkick'
+gem 'chartkick', '~> 2.2.0'
 gem 'groupdate'
