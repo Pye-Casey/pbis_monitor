@@ -65098,3 +65098,25 @@ Processing by AdminController#index as HTML
 Completed 200 OK in 1097ms (Views: 1063.9ms | ActiveRecord: 8.8ms)
 
 
+Started GET "/admin/index" for 127.0.0.1 at 2018-12-04 21:21:09 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (10.0ms)
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:83
+  Rendered admin/index.html.erb within layouts/application (958.4ms)
+Completed 200 OK in 1354ms (Views: 1306.0ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2018-12-04 21:22:05 -0700
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/_menu.html.erb (4.9ms)
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC' AS date_trunc_day_event_date_timestamptz_at_time_zone_etc_utc_at_t FROM "behaviors" WHERE (event_date IS NOT NULL) GROUP BY (DATE_TRUNC('day', (event_date::timestamptz) AT TIME ZONE 'Etc/UTC')) AT TIME ZONE 'Etc/UTC'[0m
+  ↳ app/views/admin/index.html.erb:83
+  Rendered admin/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 241ms (Views: 232.5ms | ActiveRecord: 6.0ms)
+
+
