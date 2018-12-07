@@ -12,6 +12,6 @@ class Test < ApplicationRecord
 
 	end
 
-#  	@highFliers = Behavior.count('student_id', :distinct => true)
+	
 
 end
