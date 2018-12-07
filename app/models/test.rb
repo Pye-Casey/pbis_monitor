@@ -1,6 +1,5 @@
 class Test < ApplicationRecord
-	has_many :behavior
-	has_many :student
+	
 	@recentEvents = Behavior.order(:event_date, :event_time).where(event_date: 1.week.ago..Date.today).limit(10)
 
   	@eventsByDay = Behavior.group_by_day(:event_date).count

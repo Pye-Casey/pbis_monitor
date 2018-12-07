@@ -1,4 +1,5 @@
 class Student < ApplicationRecord
+	has_many :behavior
 	def full_name
 		"#{fName} #{lName}"
 	end
