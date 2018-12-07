@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'test/index'
   get 'admin/index'
   get 'login/index'
   get 'behavior/index'
