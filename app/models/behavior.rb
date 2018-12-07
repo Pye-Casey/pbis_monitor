@@ -25,5 +25,7 @@ class Behavior < ApplicationRecord
 
 	end
 
+	
+
 
 end

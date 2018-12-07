@@ -31,7 +31,13 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                         	String:<%= @eventsByDay %> <br>
-                        	Student Count: <%= @highFliers %> <br>
+                        	Student Count: <%= @highFlierCnt %> <br>
+                        	High flier ids: <%= @highFliers.inspect %> <br>
+                        	<% @highFliers.each do |s| %>
+                        		Student ID: <%= s.student_id %> , 
+                        		Name: <%= s.student_name%>,
+                        		Count: <%= s.count %> <br>
+                        	<% end %>
                             <div id="testChart"></div>
                             
                         </div>
