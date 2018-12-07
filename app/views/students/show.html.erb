@@ -1,4 +1,4 @@
-<h1>The following Student was Added</h1>
+<h1>The following Student was Added:</h1>
 
 <%= render "layouts/header" %>
 <nav class="navbar navbar-default">
@@ -27,8 +27,18 @@
   <strong>Last Name:</strong>
   <%= @student.lName %>
 </p>
+
+      <p>
+        <strong>Grade:</strong>
+        <%= @student.grade %>
+      </p>
+
+      <p>
+        <strong>Homeroom Teacher:</strong>
+        <%= @student.homeroom_teacher %>
+        </p>
 <%= link_to 'Edit', edit_student_path(@student) %> <br>
-<%= link_to 'Back', students_path %><br>
+<%= link_to 'Back', students_path, class:"btn btn-primary" %><br>
   
 </br>
 
