@@ -1,5 +1,25 @@
+<h1>The following Student was Added</h1>
+
+<%= render "layouts/header" %>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li>
+        <%= link_to 'Home', controller: 'welcome' %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class = "container">
+  <div class ="row">
+    <div class = "col-sm">
+    </div>
+    <div class = "col-sm">
+      
 <p>
-  <strong>First Names:</strong>
+  <strong>First Name:</strong>
   <%= @student.fName %>
 </p>
  
@@ -8,4 +28,15 @@
   <%= @student.lName %>
 </p>
 <%= link_to 'Edit', edit_student_path(@student) %> <br>
-<%= link_to 'Back', students_path %>
+<%= link_to 'Back', students_path %><br>
+  
+</br>
+
+  </div>
+    </div>
+      </div>
+        
+
+
+    
+
