@@ -104,17 +104,30 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-bell fa-fw"></i> Frequent Behaviors
+                            <table width="100%" class="table table-striped table-bordered table-hover table-condensed" id="recentEvents">
+                                <thead>
+                                    <tr>
+                                       <th># Events</th>
+                                       <th>Name</th>
+                                       <th>View</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    
+                                    <% @highFliers.each do |s| %> 
+                                    <tr>
+                                      <td><%= s.count %></td>
+                                      <td><%= s.student_name %></td>
+                                      <td><%= link_to 'View', student_path(s.student_id) %></td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>                               
+                            </table>
+                            <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
