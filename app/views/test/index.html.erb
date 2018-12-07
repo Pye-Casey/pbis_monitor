@@ -31,7 +31,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                         	String:<%= @eventsByDay %> <br>
-                        	
+                        	Student Count: <%= @highFliers %> <br>
                             <div id="testChart"></div>
                             
                         </div>
@@ -89,7 +89,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div id=""></div>
-                            <%= line_chart Behavior.group_by_day(:event_date).count %>
+                           
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -171,7 +171,4 @@
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-    <%= javascript_include_tag "jquery.min.js" %>
-
-    <!-- Bootstrap Core JavaScript -->
-    <%= javascript_include_tag "bootstrap.min.js" %>
+    
