@@ -1,6 +1,8 @@
-<%= render "layouts/header" %>
+
 <h1>Parent Information</h1>
-<br/>
+
+<%= render "layouts/header" %>
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
@@ -27,9 +29,9 @@
   <strong>Last Name:</strong>
   <%= @parent.lName %>
 </p>
-<%= link_to 'Edit', edit_parent_path(@parent), class:"btn btn-primary %> <br>
+<%= link_to 'Edit', edit_parent_path(@parent) %> <br>
   <br></br>
-<%= link_to 'Back', parents_path, class:"btn btn-primary %>
+<%= link_to 'Back', parents_path %>
 
   <div>
     <div>
