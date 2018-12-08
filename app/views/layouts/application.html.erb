@@ -9,16 +9,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    
-    
+    <!-- Metis Menu Plugin JavaScript -->
+    <%= javascript_include_tag "metisMenu.min.js" %>
+    <%= javascript_include_tag 'http://yandex.st/bootstrap/3.1.1/js/bootstrap.min.js' %>
     <%= stylesheet_link_tag 'http://yandex.st/bootstrap/3.1.1/css/bootstrap.min.css' %>
-     <%= stylesheet_link_tag "sb-admin-2.css" %>
+    <%= stylesheet_link_tag "sb-admin-2.css" %>
     
 
   </head>
 
   <body>
     <%= yield %>
-    <%= javascript_include_tag 'http://yandex.st/bootstrap/3.1.1/js/bootstrap.min.js' %>
+    
   </body>
 </html>
