@@ -12,7 +12,8 @@
 </head>
 
 <body>
-
+    <%= content_tag :div, "", id: "week_events", data:{behaviors: @weekData}%>
+     <%= content_tag :div, "", id: "month_events", data:{behaviors: @monthData}%>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -31,12 +32,14 @@
                 <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Events By Location
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Events This Week
                         </div>
+                       
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <%= content_tag :div, "", id: "week_events", data: {behaviors: @behavior}%>
-                            <div id="eventByWeek"></div>
+                           
+                           
+                            <div id="eventByWeek" style="height: 250px;"></div>
 
                         </div>
                         <!-- /.panel-body -->
@@ -76,12 +79,11 @@
                 <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Events By Day
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Events By Month
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="eventByDay"></div>
-
+                            <div id="eventByMonth" style="height: 250px;"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -125,31 +127,33 @@
         <!-- /#page-wrapper -->
 
     </div>
+    
     <!-- /#wrapper -->
+
     <!-- Charts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
     <script type="text/javascript">
+        new Morris.Bar({
+            element: 'eventByMonth',
+            data: $('#month_events').data('behaviors'),
+            xkey: 'event_date',
+            ykeys: ['count'],
+            labels: ['Events'],
+            resize: true
+        });
         new Morris.Bar({
             element: 'eventByWeek',
             data: $('#week_events').data('behaviors'),
             xkey: 'event_date',
-            ykeys: ['student_id'],
-            labels: ['Events']
+            ykeys: ['count'],
+            labels: ['Events'],
+            resize: true
         });
-        new Morris.Bar({
-          element: 'eventByDay',
-          data: [
-            { d: 'Mon', a: 100},
-            { d: 'Tue', a: 75},
-            { d: 'Wed', a: 50},
-            { d: 'Thu', a: 75 },
-            { d: 'Fri', a: 50}
-          ],
-          xkey: 'd',
-          ykeys: ['a'],
-          labels: ['Events']
-        });
+        
+        
     </script>
     
 
