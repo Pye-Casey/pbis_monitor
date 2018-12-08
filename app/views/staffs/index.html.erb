@@ -18,29 +18,7 @@
       <th class="col-lg-1 col-sm-1">Destroy</th>
       <th class="col-lg-2 col-sm-2"></th>
     </tr>
-    <% @staff.each do |staff| %>
-    <tr>
-      <td></td>
-      <td>
-        <%= staff.fName %>
-      </td>
-      <td>
-        <%= staff.lName %>
-      </td>
-      <td>
-        <%= link_to 'Show', staff_path(staff) %>
-      </td>
-      <td>
-        <%= link_to 'Edit', edit_staff_path(staff) %>
-      </td>
-      <td>
-        <%= link_to 'Destroy', staff_path(staff),
-        method: :delete,
-        data: {confirm: 'Are you sure?'} %>
-      </td>
-      <td></td>
-    </tr>
-    <% end %>
+    
   </table>
   
   
