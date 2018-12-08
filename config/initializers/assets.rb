@@ -25,6 +25,8 @@ Rails.application.config.assets.precompile += %w( sb-admin-2.css )
 Rails.application.config.assets.precompile += %w( jquery.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( metisMenu.js )
+Rails.application.config.assets.precompile += %w( metisMenu.min.js )
+
 Rails.application.config.assets.precompile += %w( raphael.min.js )
 Rails.application.config.assets.precompile += %w( morris.min.js )
 Rails.application.config.assets.precompile += %w( morris-data.js )
