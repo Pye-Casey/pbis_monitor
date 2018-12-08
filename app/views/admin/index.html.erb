@@ -80,7 +80,7 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id=""></div>
+                            <div id="eventByDay"></div>
 
                         </div>
                         <!-- /.panel-body -->
@@ -149,6 +149,19 @@
           // Labels for the ykeys -- will be displayed when you hover over the
           // chart.
           labels: ['Value']
+        });
+        new Morris.Bar({
+          element: 'eventByDay',
+          data: [
+            { d: 'Mon', a: 100},
+            { d: 'Tue', a: 75},
+            { d: 'Wed', a: 50},
+            { d: 'Thu', a: 75 },
+            { d: 'Fri', a: 50}
+          ],
+          xkey: 'd',
+          ykeys: ['a'],
+          labels: ['Events']
         });
     </script>
     
