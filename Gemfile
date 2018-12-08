@@ -68,9 +68,10 @@ gem 'jquery-rails'
 # Gem for simple form
 gem 'simple_form'
 
-# Gem for sb admin base 2
-gem 'bootstrap_sb_admin_base_v2'
 
 # Gem for Chart Kick
-gem 'chartkick', '~> 2.2.0'
+gem 'chartkick'
 gem 'groupdate'
+
+# SB admin base 2
+gem 'bootstrap_sb_admin_base_v2'

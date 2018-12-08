@@ -12,13 +12,11 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
-    <!-- Custom CSS -->
-    <%= stylesheet_link_tag "sb-admin-2.css" %>
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
-    <script src="chartkick.js"></script>
+    
    
 
 
@@ -49,7 +47,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div id=""></div>
-                            <%= pie_chart [["Hallway", 10], ["Playground", 5], ["Homeroom", 20], ["Cafeteria", 20]] %>
+
                         </div>
                         <!-- /.panel-body -->
                     </div>                    
@@ -93,7 +91,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div id=""></div>
-                            <%= line_chart Behavior.group_by_day(:event_date).count %>
+                            
                         </div>
                         <!-- /.panel-body -->
                     </div>

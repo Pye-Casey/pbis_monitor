@@ -39,7 +39,7 @@
                         		Count: <%= s.count %> <br>
                         	<% end %>
                             <div id="testChart"></div>
-                            
+                            <%= line_chart Behavior.group_by_day(:event_date).count %>
                         </div>
                         <!-- /.panel-body -->
                     </div>                    
