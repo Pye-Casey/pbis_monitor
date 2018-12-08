@@ -9,19 +9,6 @@
 
     <title>Admin - PBIS</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <!-- Custom CSS -->
-    <%= stylesheet_link_tag "sb-admin-2.css" %>
-
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
-    <script src="chartkick.js"></script>
-   
-
-
 </head>
 
 <body>
@@ -48,8 +35,9 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id=""></div>
-                            <%= pie_chart [["Hallway", 10], ["Playground", 5], ["Homeroom", 20], ["Cafeteria", 20]] %>
+                            <%= content_tag :div, "", id: "week_events", data: {behaviors: @behavior}%>
+                            <div id="eventByWeek"></div>
+
                         </div>
                         <!-- /.panel-body -->
                     </div>                    
@@ -60,15 +48,27 @@
                             <i class="fa fa-bell fa-fw"></i> Recent Events
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                        <table width="100%" class="table table-striped table-bordered table-hover table-condensed" id="recentEvents">
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <% @recentEvents.each do |behave| %> 
+                                    <tr>
+                                      <td><%= behave.student_name%></td>
+                                      <td><%= behave.event_date %></td>
+                                      <td><%= behave.readable_time %></td>
+                                      <td><%= link_to 'Show', behavior_path(behave) %></td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>                               
+                            </table>
+                            <!-- /.table-responsive -->
                     </div>
                 </div>
             </div>
@@ -80,8 +80,8 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id=""></div>
-                            <%= line_chart Behavior.group_by_day(:event_date).count %>
+                            <div id="eventByDay"></div>
+
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -92,17 +92,30 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-bell fa-fw"></i> Frequent Behaviors
+                            <table width="100%" class="table table-striped table-bordered table-hover table-condensed" id="recentEvents">
+                                <thead>
+                                    <tr>
+                                       <th># Events</th>
+                                       <th>Name</th>
+                                       <th>View</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    
+                                    <% @highFliers.each do |s| %> 
+                                    <tr>
+                                      <td><%= s.count %></td>
+                                      <td><%= s.student_name %></td>
+                                      <td><%= link_to 'View', student_path(s.student_id) %></td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>                               
+                            </table>
+                            <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -113,12 +126,31 @@
 
     </div>
     <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <%= javascript_include_tag "jquery.min.js" %>
-
-    <!-- Bootstrap Core JavaScript -->
-    <%= javascript_include_tag "bootstrap.min.js" %>
+    <!-- Charts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script type="text/javascript">
+        new Morris.Bar({
+            element: 'eventByWeek',
+            data: $('#week_events').data('behaviors'),
+            xkey: 'event_date',
+            ykeys: ['student_id'],
+            labels: ['Events']
+        });
+        new Morris.Bar({
+          element: 'eventByDay',
+          data: [
+            { d: 'Mon', a: 100},
+            { d: 'Tue', a: 75},
+            { d: 'Wed', a: 50},
+            { d: 'Thu', a: 75 },
+            { d: 'Fri', a: 50}
+          ],
+          xkey: 'd',
+          ykeys: ['a'],
+          labels: ['Events']
+        });
+    </script>
     
 
 </body>
