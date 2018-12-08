@@ -1,4 +1,4 @@
-<h1>Edit Staff</h1>
+
 
 <%= render "layouts/header" %>
 <nav class="navbar navbar-default">
@@ -26,7 +26,7 @@
   <strong>Last Name:</strong>
   <%= @staff.lName %>
 </p>
-<%= link_to 'Edit', edit_staff_path(@staff) %> <br>
+<%= link_to 'Edit', edit_staff_path(@staff), class:"btn btn-primary" %> <br>
 <%= link_to 'Back', staffs_path, class:"btn btn-primary" %>
   
   		<div>
