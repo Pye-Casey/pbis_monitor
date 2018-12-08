@@ -8,11 +8,14 @@
     
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <!-- Metis Menu Plugin JavaScript -->
-    <%= javascript_include_tag "metisMenu.min.js" %>
-    <%= javascript_include_tag 'http://yandex.st/bootstrap/3.1.1/js/bootstrap.min.js' %>
-    <%= stylesheet_link_tag 'http://yandex.st/bootstrap/3.1.1/css/bootstrap.min.css' %>
+   
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- SD Admin 2 -->
     <%= stylesheet_link_tag "sb-admin-2.css" %>
     
 
@@ -20,6 +23,17 @@
 
   <body>
     <%= yield %>
+    <!-- jQuery -->
+    <%= javascript_include_tag "jquery.min.js" %>
+
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min.js" %>
+
+    <!-- Google Charts -->
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <%= javascript_include_tag "metisMenu.js" %>
     
   </body>
 </html>
