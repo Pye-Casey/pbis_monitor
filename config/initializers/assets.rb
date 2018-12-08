@@ -19,6 +19,7 @@ Rails.application.config.assets.precompile += %w( freelancer.min.css )
 Rails.application.config.assets.precompile += %w( metisMenu.min.css )
 Rails.application.config.assets.precompile += %w( morris.css )
 Rails.application.config.assets.precompile += %w( font-awesome.min.css )
+Rails.application.config.assets.precompile += %w( sb-admin-2.css )
 
 #Java Script Files
 Rails.application.config.assets.precompile += %w( jquery.min.js )
