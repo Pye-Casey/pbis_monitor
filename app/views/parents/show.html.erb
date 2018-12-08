@@ -1,4 +1,24 @@
-<p>
+<%= render "layouts/header" %>
+<h1>Parent Information</h1>
+<br/>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li>
+        <%= link_to 'Home', controller: 'welcome' %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "container">
+  <div class ="row">
+    <div class = "col-sm">
+    </div>
+    <div class = "col-sm">
+
+
+      <p>
   <strong>First Name:</strong>
   <%= @parent.fName %>
 </p>
@@ -7,5 +27,10 @@
   <strong>Last Name:</strong>
   <%= @parent.lName %>
 </p>
-<%= link_to 'Edit', edit_parent_path(@parent) %> <br>
-<%= link_to 'Back', parents_path %>
+<%= link_to 'Edit', edit_parent_path(@parent), class:"btn btn-primary %> <br>
+  <br></br>
+<%= link_to 'Back', parents_path, class:"btn btn-primary %>
+
+  <div>
+    <div>
+      <div>
