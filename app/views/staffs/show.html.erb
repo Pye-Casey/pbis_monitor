@@ -1,3 +1,20 @@
+<%= render "layouts/header" %>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li>
+        <%= link_to 'Home', controller: 'welcome' %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "container">
+  <div class ="row">
+    <div class = "col-sm">
+    </div>
+    <div class = "col-sm">
+
 <p>
   <strong>First Name:</strong>
   <%= @staff.fName %>
@@ -8,4 +25,9 @@
   <%= @staff.lName %>
 </p>
 <%= link_to 'Edit', edit_staff_path(@staff) %> <br>
-<%= link_to 'Back', staffs_path %>
+<%= link_to 'Back', staffs_path, class:"btn btn-primary" %>
+
+  <div>
+    <div>
+      <div>
+
