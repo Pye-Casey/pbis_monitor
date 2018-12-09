@@ -1,0 +1,65 @@
+
+
+<!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="/welcome/index">PBIS Monitor</a>
+            </div>
+            <!-- /.navbar-header -->
+
+           
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li><a href="/admin/index"><i class="fa fa-star fa-fw"></i> Overview</a>
+                    </li>
+                 <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-edit fa-fw"></i> <i class="fa "></i>
+                      Behavior Event
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="<%= new_behavior_path %>"><i class="fa fa-plus-circle"></i> Add Event</a>
+                            
+                        </li>
+                        <li><a href="/behaviors"><i class="fa fa-eye fa-fw"></i> View Events</a>                       
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-users fa-fw"></i> <i class="fa "></i>
+                      Students
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="<%= new_student_path %>"><i class="fa fa-plus-circle fa-fw"></i> Add Student</a>
+                        </li>
+                        <li><a href="/students"><i class="fa fa-search fa-fw"></i> View Students</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-user fa-fw"></i> <i class="fa "></i>
+                      Staff
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="<%= new_staff_path %>"><i class="fa fa-plus-circle fa-fw"></i> Add Staff</a>
+                        </li>
+                        <li><a href="/staffs"><i class="fa fa-search fa-fw"></i> View Staff</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                    <li><a href="/login/index"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </li>
+                <!-- /.dropdown -->
+                
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            
+            <!-- /.navbar-static-side -->
+        </nav>

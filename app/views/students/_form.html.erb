@@ -1,11 +1,5 @@
 <%= render "layouts/header" %>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li><%= link_to 'Home', controller: 'welcome' %></li>
-    </ul>
-  </div>
-</nav>
+
 
 <%= form_with model: @student, local: true do |form| %>
 

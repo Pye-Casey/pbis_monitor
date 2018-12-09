@@ -1,0 +1,52 @@
+
+
+<!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/admin">PBIS Monitor</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right navbar-top-links">
+        <li class="active"><a href="/admin"><i class="fa fa-star fa-fw"></i>Overview</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-edit fa-fw"></i> <i class="fa "></i>
+                Behavior Event<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="<%= new_behavior_path %>"><i class="fa fa-plus-circle"></i> Add Event</a></li>
+                <li><a href="/behaviors"><i class="fa fa-eye fa-fw"></i> View Events</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-users fa-fw"></i> <i class="fa "></i>
+            Students<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+            <li><a href="<%= new_student_path %>"><i class="fa fa-plus-circle fa-fw"></i> Add Student</a>
+            </li>
+            <li><a href="/students"><i class="fa fa-search fa-fw"></i> View Students</a>
+            </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw"></i> <i class="fa "></i>
+            Staff<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+            <li><a href="<%= new_staff_path %>"><i class="fa fa-plus-circle fa-fw"></i> Add Staff</a>
+            </li>
+            <li><a href="/staffs"><i class="fa fa-search fa-fw"></i> View Staff</a>
+            </li>
+            </ul>
+            <!-- /.dropdown-user -->
+            <li><%= link_to "Log out", logout_path, method: :delete %>
+            </li>
+        </li>
+                    <!-- /.dropdown -->
+          
+        </ul>
+      </div>
+</nav>
