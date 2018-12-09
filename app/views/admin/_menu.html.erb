@@ -15,14 +15,14 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="<%= new_behavior_path %>"><i class="fa fa-plus-circle"></i> Add Event</a>
-                            
+
                         </li>
-                        <li><a href="/behaviors"><i class="fa fa-eye fa-fw"></i> View Events</a>                       
+                        <li><a href="/behaviors"><i class="fa fa-eye fa-fw"></i> View Events</a>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
                 <!-- /.dropdown -->
-                <li class="dropdown"> 
+                <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                       <i class="fa fa-users fa-fw"></i> <i class="fa "></i>
                       Students
@@ -47,14 +47,14 @@
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
-                    <li><a href="/login/index"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    <li><%= link_to "Log out", logout_path, method: :delete %>
                     </li>
                 </li>
                 <!-- /.dropdown -->
-                
+
             </ul>
             <!-- /.navbar-top-links -->
 
-            
+
             <!-- /.navbar-static-side -->
         </nav>
