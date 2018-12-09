@@ -30,9 +30,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#testing">Testing</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
@@ -57,16 +54,9 @@
     <! Testing Section -->
     <section class="bg-primary text-white mb-0" id="testing">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">Testing</h2>
+        <h2 class="text-center text-uppercase text-white">Testing - to be removed</h2>
         <hr class="star-light mb-5">
         <div class="row">
-          <div class="col-sm-12 col-lg-4">
-            <h3>Parents</h3>
-            <p>The following demonstrate CRUD control for parents table.</p>
-            <%= link_to 'Parents', controller: 'parents' , class:"btn btn-primary" %><br>
-
-            <%= link_to 'Add parents', new_parent_path, class:"btn btn-primary" %><br>
-          </div>
           <div class="col-sm-12 col-lg-4">
             <h3>Students</h3>
             <p>The following demonstrate CRUD control for students table.</p>
@@ -88,24 +78,11 @@
           <%= link_to 'Add Behaviors', new_behavior_path , class:"btn btn-primary"%><br>
           </div>
           <div class="col-sm-12 col-lg-4">
-            <h3>Login</h3>
-            <p>The following is a link to the Login page</p>
-            
-          </div>
-          <div class="col-sm-12 col-lg-4">
             <h3>Admin Page</h3>
             <p>The following is a link to the admin page.</p>
             <%= link_to 'Admin', controller: 'admin', class:"btn btn-primary" %><br>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 col-lg-4">
-            <h3>Testing</h3>
-            <p>Testing charts</p>
-            <%= link_to 'Test', controller: 'test' %><br>
-          
-          </div>
-      </div>
     </section>
 
 
@@ -116,10 +93,15 @@
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Of course I am using a template... I ain't waisting time on this.</p>
+            <p class="lead">PBIS Monitor is a CS 499 Senior Project for the following students:</p>
+            <ul>
+              <li>Casey Pye</li>
+              <li>Damon Simpkinson</li>
+              <li>Thomas Whitelock</li>
+            </ul>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">PBIS Monitor is a student behavior loggin software. Report problem behaviors on any internet enabled device. View reports on the spot.</p>
+            <p class="lead">PBIS Monitor is a student behavior logging software. Report problem behaviors on any internet enabled device. View reports on the spot.</p>
           </div>
         </div>
 
