@@ -1,3 +1,5 @@
+<h1>Staff</h1>
+
 <%= render "layouts/header" %>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -24,10 +26,11 @@
   <strong>Last Name:</strong>
   <%= @staff.lName %>
 </p>
-<%= link_to 'Edit', edit_staff_path(@staff) %> <br>
+<%= link_to 'Edit', edit_staff_path(@staff), class:"btn btn-primary" %> <br>
+  <br>
 <%= link_to 'Back', staffs_path, class:"btn btn-primary" %>
-
-  <div>
-    <div>
-      <div>
+  
+  		<div>
+	<div>
+<div>
 

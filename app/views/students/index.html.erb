@@ -1,5 +1,5 @@
 <%= render "layouts/header" %>
-<h1>Listing Students</h1>
+<h1>Current Student List</h1>
 <br/>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -39,26 +39,4 @@
 </table>
 
 
-<h1>Listing Students</h1>
 
-<table>
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th></th>
-  </tr>
-
-  <% @students.each do |student| %>
-    <tr>
-      <td><%= student.fName %></td>
-      <td><%= student.lName %></td>
-      <td><%= link_to 'Show', student_path(student) %></td>
-	  <td><%= link_to 'Edit', edit_student_path(student) %></td>
-	  <td><%= link_to 'Destroy', student_path(student),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
-<br>
-<%= link_to 'Home', controller: 'welcome' %>

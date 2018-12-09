@@ -1,5 +1,31 @@
-<h1>New Staff</h1>
- 
-<%= render 'form' %>
- 
-<%= link_to 'Back', staffs_path, class:"btn btn-primary" %>
+<% provide(:title, 'New Staff Member') %>
+<h1 align="center">Add New Staff Member</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@staff, url: signup_path) do |f| %>
+      <%= render 'error_messages' %>
+
+      <%= f.label "First Name"  %>
+      <%= f.text_field :fName, class: 'form-control' %>
+
+      <%= f.label "Last Name" %>
+      <%= f.text_field :lName, class: 'form-control' %>
+
+      <%= f.label "Grade" %>
+      <%= f.text_field :gradeTaught, class: 'form-control' %>
+
+      <%= f.label "Email" %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label "Password" %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <br/>
+
+      <%= f.submit "Add New Staff Member", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
