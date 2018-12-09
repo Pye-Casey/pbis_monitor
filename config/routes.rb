@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get     '/admin',       to: 'admin#index'
   get     '/behavior',    to: 'bahavior#index'
   get     '/welcome',     to: 'welcome#index'
+  get     '/sessions',    to: 'sessions#index'
   get     '/login',       to: 'sessions#new'
   post    '/login',       to: 'sessions#create'
   delete  '/logout',      to: 'sessions#destroy'
@@ -14,5 +15,6 @@ Rails.application.routes.draw do
   resources :staffs
   resources :behaviors
 
-  root 'sessions#new'
+  #root 'sessions#new'
+  root 'welcome#index'
 end
