@@ -1,11 +1,11 @@
 class SessionsController < ApplicationController
 
   def index
-    
+
   end
 
   def new
-      @sessions = Session.all
+      
   end
 
   def create
