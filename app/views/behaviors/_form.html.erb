@@ -119,7 +119,7 @@
                                 <div class="col-lg-6">
                                 <h3>Major Problem Behaviors</h3>
                                 <div>
-                                    <<div class="form-group">
+                                    <div class="form-group">
                                         <%= form.check_box(:major_language) %>
                                         <%= label_tag(:major_language, "Abusive/Inappropriate language") %> <br>
                                         <%= form.check_box(:major_aggression) %>
@@ -249,6 +249,6 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <%= form.submit("Log Event", class: 'btn button-primary')%>
+                <%= form.submit("Save Changes", class: 'btn button-primary')%>
             </div>
 <% end %>
