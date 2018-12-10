@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post    '/signup',          to: 'staffs#create'
   post    '/staffs/update',   to: 'staffs#update'
   post    '/students/create', to: 'students#create'
+  post    '/students/update', to: 'sutdents#update'
 
 
   resources :parents

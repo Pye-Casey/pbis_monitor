@@ -21,7 +21,7 @@ class StudentsController < ApplicationController
 
 		if @student.save
 			flash[:success] = "New Student Added!"
-			redirect_to @student
+			redirect_to admin_path
 		else
 			render 'new'
 		end
@@ -32,7 +32,8 @@ class StudentsController < ApplicationController
 	def update
 		@student = Student.find(params[:id])
 		if @student.update(student_params)
-			redirect_to @student
+			flash[:success] = "Student Updated!"
+			redirect_to admin_path
 		else
 			render 'edit'
 		end
