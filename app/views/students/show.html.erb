@@ -26,6 +26,55 @@
     </script>
 </head>
 
+<body>
+
+    <div id="wrapper">
+
+        <%= render 'menu' %>
+
+        <div id="" class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Student</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            
+            <p>
+  <strong>First Name:</strong>
+  <%= @student.fName %>
+</p>
+ 
+<p>
+  <strong>Last Name:</strong>
+  <%= @student.lName %>
+</p>
+
+      <p>
+        <strong>Grade:</strong>
+        <%= @student.grade %>
+      </p>
+
+      <p>
+        <strong>Homeroom Teacher:</strong>
+        <%= @student.homeroom_teacher %>
+        </p>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+        <%= link_to 'Back', student_path %>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <%= javascript_include_tag "jquery.min.js" %>
+
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag "bootstrap.min.js" %>
+    
+</body>
 
 
 
