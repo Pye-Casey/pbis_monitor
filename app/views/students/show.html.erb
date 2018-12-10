@@ -42,29 +42,27 @@
             <!-- /.row -->
             
             <p>
-  <strong>First Name:</strong>
-  <%= @student.fName %>
-</p>
+			 <strong>First Name:</strong>
+			 <%= @student.fName %>
+			</p>
  
-<p>
-  <strong>Last Name:</strong>
-  <%= @student.lName %>
-</p>
-
-      <p>
-        <strong>Grade:</strong>
-        <%= @student.grade %>
-      </p>
-
-      <p>
-        <strong>Homeroom Teacher:</strong>
-        <%= @student.homeroom_teacher %>
-        </p>
+			<p>
+				<strong>Last Name:</strong>
+				<%= @student.lName %>
+			</p>
+			<p>
+				<strong>Grade:</strong>
+				<%= @student.grade %>
+			</p>
+	      <p>
+			<strong>Homeroom Teacher:</strong>
+			<%= @student.homeroom_teacher %>
+		  </p><br>
+		  <%= link_to 'Edit', edit_student_path(@student), class:"btn btn-primary" %>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 
-        <%= link_to 'Back', student_path %>
     </div>
     <!-- /#wrapper -->
 
@@ -75,51 +73,3 @@
     <%= javascript_include_tag "bootstrap.min.js" %>
     
 </body>
-
-
-
-
-<%= render 'menu' %>
-<h1>Student Info:</h1>
-
-<%= render "layouts/header" %>
-
-<div class = "container">
-  <div class ="row">
-    <div class = "col-sm">
-    </div>
-    <div class = "col-sm">
-      
-<p>
-  <strong>First Name:</strong>
-  <%= @student.fName %>
-</p>
- 
-<p>
-  <strong>Last Name:</strong>
-  <%= @student.lName %>
-</p>
-
-      <p>
-        <strong>Grade:</strong>
-        <%= @student.grade %>
-      </p>
-
-      <p>
-        <strong>Homeroom Teacher:</strong>
-        <%= @student.homeroom_teacher %>
-        </p>
-<%= link_to 'Edit', edit_student_path(@student), class:"btn btn-primary" %> <br>
-  <br></br>
-<%= link_to 'Back', students_path, class:"btn btn-primary" %><br>
-  
-</br>
-
-  </div>
-    </div>
-      </div>
-        
-
-
-    
-
