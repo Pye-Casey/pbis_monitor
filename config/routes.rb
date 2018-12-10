@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete  '/logout',          to: 'sessions#destroy'
   post    '/signup',          to: 'staffs#create'
   post    '/staffs/update',   to: 'staffs#update'
+  post    '/students/create', to: 'students#create'
 
 
   resources :parents

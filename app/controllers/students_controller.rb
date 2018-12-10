@@ -20,13 +20,12 @@ class StudentsController < ApplicationController
 		@student = Student.new(student_params)
 
 		if @student.save
+			flash[:success] = "New Student Added!"
 			redirect_to @student
 		else
 			render 'new'
 		end
-
 		/@student.save
-
 		redirect_to @student/
 	end
 
