@@ -63,7 +63,6 @@
                                 <tbody>
                                    <% @students.each do |student| %>
                                      <tr>
-										<td></td>
 										<td><%= student.fName %></td>
 										<td><%= student.lName %></td>
 										<td><%= student.grade %></td>
@@ -93,7 +92,7 @@
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
-        <%= link_to 'Home', controller: 'welcome' %>
+        <%= link_to 'Back', students_path %>
     </div>
     <!-- /#wrapper -->
 
