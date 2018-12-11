@@ -33,7 +33,7 @@
                                             <%= form.text_field :peers_involved, class:'form-control' %>
                                         </div>
                                         <div class="form-group">
-                                            <%= form.label :"Reffering staff: " %>
+                                            <%= form.label :"Referring staff: " %>
                                             <%= form.select :staff_id, Staff.all.collect { |s| [s.full_name_last, s.id] }, {}, {required: 'true', autofocus: 'false', class: 'form-control'} %>
                                         </div>
                                         

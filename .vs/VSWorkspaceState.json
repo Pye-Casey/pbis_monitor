@@ -2,14 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\app",
+    "\\app\\assets\\config",
+    "\\app\\channels\\application_cable",
+    "\\app\\controllers",
+    "\\app\\models",
     "\\app\\views",
-    "\\app\\views\\layouts",
-    "\\app\\views\\staffs",
     "\\app\\views\\students",
-    "\\lib\\assets",
-    "\\lib\\templates\\erb\\scaffold",
-    "\\public"
+    "\\lib\\templates",
+    "\\lib\\templates\\erb",
+    "\\lib\\templates\\erb\\scaffold"
   ],
-  "SelectedNode": "\\app\\views\\staffs\\new.html.erb",
+  "SelectedNode": "\\app\\views\\students\\edit.html.erb",
   "PreviewInSolutionExplorer": false
 }
