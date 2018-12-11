@@ -1,72 +1,33 @@
-<head>
+<% provide(:title, 'Show Student') %>
+<%= render 'menu' %>
+<h1 align="center">Student Details</h1>
+<br/>
+<%= render "layouts/header" %>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Admin - PBIS</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <!-- Custom CSS -->
-    <%= stylesheet_link_tag "sb-admin-2.css" %>
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Datatables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script>
-      $(document).ready( function () {
-        $('#studentTable').DataTable();
-        console.log("Document ready");
-      } );
-    </script>
-</head>
-
-<body>
-
-    <div id="wrapper">
-
-        <%= render 'menu' %>
-
-        <div id="" class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Student</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="panel-body">
-            <p>
-			 <strong>First Name:</strong>
-			 <%= @student.fName %>
-			<br>
-				<strong>Last Name:</strong>
-				<%= @student.lName %>
-			<br>
-				<strong>Grade:</strong>
-				<%= @student.grade %>
-	      <br>
-			<strong>Homeroom Teacher:</strong>
-			<%= @student.homeroom_teacher %>
-		  </p><br>
-		  <%= link_to 'Edit', edit_student_path(@student), class:"btn btn-primary" %>
-            <!-- /.row -->
-        </div>
-		</div>
-        <!-- /#page-wrapper -->
-
+<div class = "container">
+  <div class ="row">
+    <div class = "col-lg-3 col-sm-1"></div>
+    <div class = "col-lg-6 col-sm-10">
+      <p>
+        <strong>First Name:</strong>
+        <%= @student.fName %>
+      </p>
+      <p>
+        <strong>Last Name:</strong>
+        <%= @student.lName %>
+      </p>
+      <p>
+        <strong>Grade:</strong>
+        <%= @student.grade %>
+      </p>
+      <p>
+        <strong>Teacher:</strong>
+        <%= @staff.lName %>, <%= @staff.fName %>
+      </p>
+      <br/>
+      <%= link_to 'Edit', edit_student_path(@student), class:"btn btn-primary" %>
+      <%= link_to 'Back', students_path, class:"btn btn-primary" %>
     </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <%= javascript_include_tag "jquery.min.js" %>
-
-    <!-- Bootstrap Core JavaScript -->
-    <%= javascript_include_tag "bootstrap.min.js" %>
-    
-</body>
+    <div class = "col-lg-3 col-sm-1"></div>
+  </div>
+</div>

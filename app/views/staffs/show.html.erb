@@ -1,27 +1,33 @@
+<% provide(:title, 'Show Staff Member') %>
 <%= render 'menu' %>
-<h1>Staff</h1>
-
+<h1 align="center">Staff Details</h1>
+<br/>
 <%= render "layouts/header" %>
 
 <div class = "container">
   <div class ="row">
-    <div class = "col-sm">
+    <div class = "col-lg-3 col-sm-1"></div>
+    <div class = "col-lg-6 col-sm-10">
+      <p>
+        <strong>First Name:</strong>
+        <%= @staff.fName %>
+      </p>
+      <p>
+        <strong>Last Name:</strong>
+        <%= @staff.lName %>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= @staff.email %>
+      </p>
+      <p>
+        <strong>Grade:</strong>
+        <%= @staff.gradeTaught %>
+      </p>
+      <br/>
+      <%= link_to 'Edit', edit_staff_path(@staff), class:"btn btn-primary" %>
+      <%= link_to 'Back', staffs_path, class:"btn btn-primary" %>
     </div>
-    <div class = "col-sm">
-
-<p>
-  <strong>First Name:</strong>
-  <%= @staff.fName %>
-</p>
-
-<p>
-  <strong>Last Name:</strong>
-  <%= @staff.lName %>
-</p>
-<%= link_to 'Edit', edit_staff_path(@staff), class:"btn btn-primary" %> <br>
-  <br>
-<%= link_to 'Back', staffs_path, class:"btn btn-primary" %>
-
-  		<div>
-	<div>
-<div>
+    <div class = "col-lg-3 col-sm-1"></div>
+  </div>
+</div>
