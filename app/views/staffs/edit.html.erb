@@ -1,5 +1,6 @@
-<%= render 'menu' %>
 <% provide(:title, 'Edit Staff Member') %>
+<%= render 'menu' %>
+
 <h1 align="center">Edit Staff Member</h1>
 
 <%= render "layouts/header" %>
@@ -29,7 +30,7 @@
       <%= f.password_field :password_confirmation, class: 'form-control' %>
       <br/>
 
-      <%= f.submit "Edit Staff Member", class: "btn btn-primary" %>
+      <%= f.submit "Save Changes", class: "btn btn-primary" %>
       <%= link_to 'Return to Main', admin_path, class: "btn btn-primary"  %>
     <% end %>
   </div>
