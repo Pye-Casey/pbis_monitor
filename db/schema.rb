@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_09_022017) do
+ActiveRecord::Schema.define(version: 2018_12_12_033721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,10 +49,10 @@ ActiveRecord::Schema.define(version: 2018_12_09_022017) do
     t.string "antecedent"
     t.string "behavior_description"
     t.string "due_process"
-    t.string "minor_other"
-    t.string "major_other"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "minor_other"
+    t.string "major_other"
     t.boolean "get_peer_attention"
     t.boolean "get_adult_attention"
     t.boolean "get_items_activities"
@@ -93,12 +93,26 @@ ActiveRecord::Schema.define(version: 2018_12_09_022017) do
     t.string "admin_other"
   end
 
+  create_table "parents", force: :cascade do |t|
+    t.string "fName"
+    t.string "lName"
+    t.string "mName"
+    t.integer "grade"
+    t.string "email"
+    t.integer "phone"
+    t.integer "homeroom_teacher"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "staffs", force: :cascade do |t|
     t.string "fName"
     t.string "lName"
+    t.string "mName"
     t.string "role"
     t.integer "gradeTaught"
     t.string "email"
+    t.integer "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
@@ -108,10 +122,14 @@ ActiveRecord::Schema.define(version: 2018_12_09_022017) do
   create_table "students", force: :cascade do |t|
     t.string "fName"
     t.string "lName"
+    t.string "mName"
     t.integer "grade"
+    t.string "email"
+    t.integer "phone"
     t.integer "homeroom_teacher"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "teacher_name"
   end
 
   create_table "tests", force: :cascade do |t|

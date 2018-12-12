@@ -1,12 +1,13 @@
 class StudentsController < ApplicationController
 
+	
 	def index
 		@students = Student.all
 	end
 
 	def show
 		@student = Student.find(params[:id])
-		@staff = Staff.find(@student.homeroom_teacher)
+		#@staff = Staff.find(@student.homeroom_teacher)
 	end
 
 	def new
@@ -48,6 +49,6 @@ class StudentsController < ApplicationController
 
 	private
 	def student_params
-		params.require(:student).permit(:fName, :lName, :grade, :homeroom_teacher)
+		params.require(:student).permit(:fName, :lName, :grade, :homeroom_teacher, :teacher_name)
 	end
 end

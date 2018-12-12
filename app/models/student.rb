@@ -2,10 +2,10 @@ class Student < ApplicationRecord
 	has_many :behavior
 
 	validates :fName,				presence: true, length: { maximum: 20 }
-  validates :lName, 			presence: true, length: { maximum: 20 }
-  validates :grade, 			presence: true
+  	validates :lName, 			presence: true, length: { maximum: 20 }
+  	validates :grade, 			presence: true
 
-	def full_name
+  	def full_name
 		"#{fName} #{lName}"
 	end
 
@@ -17,5 +17,7 @@ class Student < ApplicationRecord
 		"#{lName}, #{fName} -#{grade}"
 	end
 
+	private
+	
 
 end

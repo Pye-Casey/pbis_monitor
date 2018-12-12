@@ -18,7 +18,7 @@
       <%= f.text_field :grade, class: 'form-control' %>
 
       <%= f.label "Teacher" %>
-      <%= f.select :homeroom_teacher, Staff.all.collect { |s| [s.lName, s.id] }, {}, required: 'true', autofocus: 'false', class: 'form-control' %>
+      <%= f.select :teacher_name, Staff.all.collect { |s| [s.full_name_last, s.full_name_last] }, {}, required: 'true', autofocus: 'false', class: 'form-control' %>
 
       <br/>
 
