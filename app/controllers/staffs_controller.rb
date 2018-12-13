@@ -1,6 +1,7 @@
 class StaffsController < ApplicationController
 
 	before_action :logged_in_user
+	#before_action :no_edit, only: [:edit]
 
 	def index
 		@staffs = Staff.all
@@ -53,6 +54,15 @@ class StaffsController < ApplicationController
 	def staff_params
 		params.require(:staff).permit(:fName, :lName, :gradeTaught, :email,
 																:password, :password_confirmation)
+	end
+
+	def no_edit
+		@staff = Staff.find(params[:id])
+		@current_user ||= Staff.find_by(id: session[:staff_id])
+		if @staff != @current_user
+			flash[:danger] = "You may not edit another user"
+			redirect_to staffs_path
+		end
 	end
 
 
