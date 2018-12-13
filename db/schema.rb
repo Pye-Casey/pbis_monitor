@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_12_033721) do
+ActiveRecord::Schema.define(version: 2018_12_13_010223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,8 @@ ActiveRecord::Schema.define(version: 2018_12_12_033721) do
     t.boolean "admin_suspension"
     t.boolean "admin_expulsion"
     t.string "admin_other"
+    t.string "staff_name"
+    t.string "student_name"
   end
 
   create_table "parents", force: :cascade do |t|
