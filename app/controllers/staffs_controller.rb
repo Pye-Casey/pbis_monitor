@@ -38,7 +38,7 @@ class StaffsController < ApplicationController
 		@staff = Staff.find(params[:id])
 		if @staff.update(staff_params)
 			flash[:success] = "Staff Member Updated!"
-			redirect_to admin_path
+			redirect_to staffs_path
 		else
 			render 'edit'
 		end
