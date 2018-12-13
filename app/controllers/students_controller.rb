@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
 	before_action :logged_in_user
 
 	def index
-		@students = Student.all
+		@students = Student.order(id: :asc)
 	end
 
 	def show

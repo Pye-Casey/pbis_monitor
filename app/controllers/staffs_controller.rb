@@ -4,7 +4,7 @@ class StaffsController < ApplicationController
 	#before_action :no_edit, only: [:edit]
 
 	def index
-		@staffs = Staff.all
+		@staffs = Staff.order(id: :asc)
 	end
 
 	def show
