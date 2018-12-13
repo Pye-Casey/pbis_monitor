@@ -1,5 +1,7 @@
 class StaffsController < ApplicationController
 
+	before_action :logged_in_user
+
 	def index
 		@staffs = Staff.all
 	end
@@ -52,4 +54,6 @@ class StaffsController < ApplicationController
 		params.require(:staff).permit(:fName, :lName, :gradeTaught, :email,
 																:password, :password_confirmation)
 	end
+
+
 end
