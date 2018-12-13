@@ -108,7 +108,7 @@
                                     <% @highFliers.each do |s| %> 
                                     <tr>
                                       <td><%= s.count %></td>
-                                      <td><%= s.student_name %></td>
+                                      <td><%= s.create_student_name %></td>
                                       <td><%= link_to 'View', student_path(s.student_id) %></td>
                                     </tr>
                                   <% end %>
