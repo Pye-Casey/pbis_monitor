@@ -1,5 +1,6 @@
 <% provide(:title, 'Edit Student') %>
 <%= render 'menu' %>
+<%= render 'logged_in_as' %>
 
 <h1 align="center">Edit Student</h1>
 <div class="row">
@@ -23,7 +24,7 @@
       <br/>
 
       <%= f.submit "Save Changes", class: "btn btn-primary" %>
-      <%= link_to 'Return to View', students_path, class: "btn btn-primary" %> 
+      <%= link_to 'Return to View', students_path, class: "btn btn-primary" %>
       <% end %>
   </div>
 </div>
