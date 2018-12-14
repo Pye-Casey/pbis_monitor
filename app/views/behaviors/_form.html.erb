@@ -1,6 +1,6 @@
 
 <%= form_with model: @behavior, local: true do |form| %>
-    <div class="row">
+    <div class="container">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -77,8 +77,7 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
+           
 
             <div class="row">
                 <div class="col-lg-12">
@@ -248,7 +247,9 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
-                <%= form.submit("Save", class: 'btn button-primary')%>
-            </div>
+           
+            <%= form.submit "Save Event", class: "btn btn-primary" %>
+            <%= link_to 'Return to View', behaviors_path, class: "btn btn-primary" %>
+     </div>
+            <!-- /.row -->    
 <% end %>

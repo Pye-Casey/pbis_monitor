@@ -33,7 +33,7 @@
 
     <div id="wrapper">
         <%= render 'menu' %>
-        
+        <%= render 'logged_in_as' %>
 
         <div id="" class="container">
             <div class="row">
@@ -95,9 +95,11 @@
         </div>
         <!-- /#page-wrapper -->
             <!-- /.row -->
+
+        <%= link_to 'Return to Main', admin_path, class: "btn btn-primary"  %>
+        <br>
         </div>
         <!-- /#page-wrapper -->
-        <%= link_to 'Home', controller: 'welcome' %>
     </div>
     <!-- /#wrapper -->
 
