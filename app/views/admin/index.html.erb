@@ -18,6 +18,7 @@
 
         <!-- Navigation -->
         <%= render 'menu' %>
+        <%= render 'logged_in_as' %>
 
         <div id="" class="container">
             <div class="row">
@@ -25,25 +26,25 @@
                     <h1 class="page-header">Dashboard</h1>
                 </div>
                 <!-- /.col-lg-12 -->
-            </div> 
+            </div>
             <!-- /.row -->
-            
+
             <div class="row">
                 <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i> Events This Week
                         </div>
-                       
+
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                           
-                           
+
+
                             <div id="eventByWeek" style="height: 250px;"></div>
 
                         </div>
                         <!-- /.panel-body -->
-                    </div>                    
+                    </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="panel panel-default table-responsive">
@@ -61,7 +62,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  <% @recentEvents.each do |behave| %> 
+                                  <% @recentEvents.each do |behave| %>
                                     <tr>
                                       <td><%= behave.student_name%></td>
                                       <td><%= behave.event_date %></td>
@@ -69,7 +70,7 @@
                                       <td><%= link_to 'Show', behavior_path(behave) %></td>
                                     </tr>
                                   <% end %>
-                                </tbody>                               
+                                </tbody>
                             </table>
                             <!-- /.table-responsive -->
                     </div>
@@ -104,20 +105,20 @@
                                 </thead>
 
                                 <tbody>
-                                    
-                                    <% @highFliers.each do |s| %> 
+
+                                    <% @highFliers.each do |s| %>
                                     <tr>
                                       <td><%= s.count %></td>
                                       <td><%= s.create_student_name %></td>
                                       <td><%= link_to 'View', student_path(s.student_id) %></td>
                                     </tr>
                                   <% end %>
-                                </tbody>                               
+                                </tbody>
                             </table>
                             <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-heading -->
-                        
+
                     </div>
                 </div>
 
@@ -127,7 +128,7 @@
         <!-- /#page-wrapper -->
 
     </div>
-    
+
     <!-- /#wrapper -->
 
     <!-- Charts -->
@@ -152,9 +153,9 @@
             labels: ['Events'],
             resize: true
         });
-        
-        
+
+
     </script>
-    
+
 
 </body>
