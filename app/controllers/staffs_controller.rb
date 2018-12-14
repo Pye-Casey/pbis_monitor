@@ -1,7 +1,7 @@
 class StaffsController < ApplicationController
 
 	before_action :logged_in_user
-	#before_action :no_edit, only: [:edit]
+	before_action :no_edit, only: [:edit]
 
 	def index
 		@staffs = Staff.order(id: :asc)
